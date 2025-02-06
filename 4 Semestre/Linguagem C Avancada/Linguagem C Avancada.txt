@@ -1,0 +1,45 @@
+LINGUAGEM C AVANÇADA
+Prof Kao Ji Kan
+
+AULA 1 - Revisão sobre subprograma (função ou procedimento) em Linguagem C.
+
+Subprograma: é uma tarefa específica (um conjunto de instruções)
+-----------------------------------------------------------------
+Exemplo 1 - Subprograma como procedimento
+--> Enviar uma mensagem através de um procedimento (subprograma)
+
+Exemplo 2 - Subprograma como uma função
+--> Faça uma função que receba um número inteiro n >= 1 e retorna o resultado da soma de todos os números inteiros de 1 a n. Exemplo: se n = 6, resultado = 1+2+3+4+5+6 = 21.
+
+Exemplo 3 - Criar uma própria biblioteca em C
+------------------------------------------------------------------
+Procedimento (comando) utiliza-se void.
+Função (vlaor) utiliza-se o return.
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+AULA 2 - Complexidade ou eficiência de algoritmos (programa/software/sistemas)
+--> Velocidade de uma resposta de um algoritmo
+
+A complexidade de algoritmo --> com sua entrada de Dados!!! --> depende da quantidade de dados para entrada!!
+
+Exemplo: Sistema do Governo: Imposto de Renda
+Qual a quantidade de entrada??? 200 milhões brasileiros.
+-------------------------------------------------------------------
+Para analisar eficientemente um algoritmo:
+-Melhor caso:
+-Caso médio:
+-Pior caso:
+
+Exemplo: Um algoritmo de bus ou chamamos busca linear ou busca sequencial. Dado um conjunto de dados e vai ser armazenados numa lista (vetor) e um valor x, o algoritmo verifique se x está dentro 
+deste conjunto de dados.
+
+Ideia de buscar um determinado valor x, faça a comparação com todos elementos armazenados até achar.
+
+Para este algoritmo: cada operação do algoritmo gasta um determinado tempo. Suponha que cada operação de comparação gaste 0.1 s. Tamanho da lista 100.000 posições
+-Melhor caso: Foi achado na primeira posição -> tempo gasto 0.1s
+-Caso médio: Foi achado mais ou menso no meio da lista -> tempo gasto 5.000s (+ ou -).
+	     Para acontecer isso, tem que deixar ou manipular o valor x sempre próximo ao meio da lista, mas os dados são aleatórios.
+-Pior caso: Foi achado na última posição ou não achadao -> tempo gasto 10.000s 
+	    Nesse tenho ceteza que meu algoritmo não vai passar desse tempo.
+
+Para complkexidade ou eficiência de algoritmos: Sempre considera o pior caso!!!

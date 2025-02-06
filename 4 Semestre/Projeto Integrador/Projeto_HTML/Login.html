@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solidário.Net - Login e Cadastro</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Estilo Personalizado -->
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+  <div class="container my-5">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="inserir aqui a logo" alt="Logo" width="50" height="50" class="d-inline-block align-text-top"> 
+          Solidário.Net
+        </a>
+        <button class="btn btn-outline-primary" onclick="window.location.href='Login.html'">Entrar / Cadastrar-se</button>
+      </div>
+    </nav>
+
+    <!-- Login e Cadastro -->
+    <div class="row">
+      <!-- Login -->
+      <div class="col-md-6 border-end">
+        <h4 class="text-center mb-4">FAÇA SEU LOGIN</h4>
+        <form name="form1" id="loginForm">
+          <div class="mb-3">
+            <label for="emailCPF" class="form-label">E-mail ou CPF</label>
+            <input type="text" class="form-control" id="emailCPF" placeholder="Digite seu e-mail ou CPF" name="txtLogin">
+          </div>
+          <div class="mb-3">
+            <label for="senhaLogin" class="form-label">Senha</label>
+            <div class="input-group">
+              <input type="password" class="form-control" id="senhaLogin" placeholder="Digite sua senha" name="txtSenha">
+              <button class="btn btn-outline-secondary" type="button" id="revealPasswordLogin">
+                <i class="bi bi-eye"></i> 
+              </button>
+            </div>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Entrar</button>
+            <div id="mensagemLogin" class="text-danger mt-2"></div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Cadastro -->
+      <div class="col-md-6">
+        <h4 class="text-center mb-4">QUERO ME CADASTRAR</h4>
+        <form id="cadastroForm">
+          <div class="mb-3">
+            <label for="emailCadastro" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="emailCadastro" placeholder="Digite seu e-mail" required>
+          </div>
+          <div class="mb-3">
+            <label for="cpfCadastro" class="form-label">CPF</label>
+            <input type="text" class="form-control" id="cpfCadastro" placeholder="Digite seu CPF" required>
+          </div>
+          <div class="mb-3">
+            <label for="nomeCompleto" class="form-label">Nome Completo</label>
+            <input type="text" class="form-control" id="nomeCompleto" placeholder="Digite seu nome completo" required>
+          </div>
+          <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone" required>
+          </div>
+          <div class="mb-3">
+            <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+            <input type="date" class="form-control" id="dataNascimento" required>
+          </div>
+          <div class="mb-3">
+            <label for="senhaCadastro" class="form-label">Senha</label>
+            <div class="input-group">
+              <input type="password" class="form-control" id="senhaCadastro" placeholder="Digite sua senha" required>
+              <button class="btn btn-outline-secondary" type="button" id="revealPasswordCadastro">
+                <i class="bi bi-eye"></i> 
+              </button>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="confirmarSenha" class="form-label">Confirmar Senha</label>
+            <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirme sua senha" required>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-success">Finalizar Cadastro</button>
+            <div id="mensagemCadastro" class="text-danger mt-2"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Iniciamos a Programação em JavaScript -->
+  <script type="text/javascript">
+    // Função para validar e enviar os dados de login
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Previne o envio tradicional do formulário
+
+      const login = document.form1.txtLogin.value;
+      const senha = document.form1.txtSenha.value;
+      
+      if (login !== "" && senha !== "") {
+        const dados = { 
+          login: login,
+          senha: senha
+        };
+
+        const options = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(dados),
+        };
+
+        const URL = 'http://localhost/api_solidario/api/Login'; //mudar a url
+
+        fetch(URL, options)
+          .then(resp => resp.json())
+          .then(data => mostrarRespostaLogin(data))
+          .catch(erro => console.log(erro));
+      } else {
+        document.getElementById("mensagemLogin").textContent = "Por favor, preencha todos os campos.";
+      }
+    });
+
+    // Função para mostrar a resposta do login
+    function mostrarRespostaLogin(data) {
+      if (data.status === "error") {
+        document.getElementById("mensagemLogin").textContent = data.information;
+      } else {
+        let perfil = data.information.perfil;
+        if (perfil.toLowerCase().includes("adm")) {
+          location.href = "adm.html"; //mudar para a situaçao do nosso app
+        } else {
+          location.href = "user.html";
+        }
+      }
+    }
+
+    // Função para validar e enviar os dados de cadastro
+    document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const email = document.getElementById("emailCadastro").value;
+      const cpf = document.getElementById("cpfCadastro").value;
+      const nome = document.getElementById("nomeCompleto").value;
+      const telefone = document.getElementById("telefone").value;
+      const dataNascimento = document.getElementById("dataNascimento").value;
+      const senha = document.getElementById("senhaCadastro").value;
+      const confirmarSenha = document.getElementById("confirmarSenha").value;
+
+      if (senha !== confirmarSenha) {
+        document.getElementById("mensagemCadastro").textContent = "As senhas não coincidem.";
+        return;
+      }
+
+      if (email !== "" && cpf !== "" && nome !== "" && telefone !== "" && dataNascimento !== "" && senha !== "") {
+        const dadosCadastro = { 
+          email: email,
+          cpf: cpf,
+          nome: nome,
+          telefone: telefone,
+          dataNascimento: dataNascimento,
+          senha: senha
+        };
+
+        const optionsCadastro = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(dadosCadastro),
+        };
+
+        const URLCadastro = 'http://localhost/api_solidario/api/Cadastro'; //mudar a url
+
+        fetch(URLCadastro, optionsCadastro)
+          .then(resp => resp.json())
+          .then(data => mostrarRespostaCadastro(data))
+          .catch(erro => console.log(erro));
+      } else {
+        document.getElementById("mensagemCadastro").textContent = "Por favor, preencha todos os campos.";
+      }
+    });
+
+    // Função para mostrar a resposta do cadastro
+    function mostrarRespostaCadastro(data) {
+      if (data.status === "error") {
+        document.getElementById("mensagemCadastro").textContent = data.information;
+      } else {
+        document.getElementById("mensagemCadastro").textContent = "Cadastro realizado com sucesso!";
+      }
+    }
+
+    // Função para revelar a senha no login
+    document.getElementById("revealPasswordLogin").addEventListener("click", function() {
+      const senhaInput = document.getElementById("senhaLogin");
+      if (senhaInput.type === "password") {
+        senhaInput.type = "text";
+        this.innerHTML = '<i class="bi bi-eye-slash"></i>'; // Troca o ícone para o de esconder a senha
+      } else {
+        senhaInput.type = "password";
+        this.innerHTML = '<i class="bi bi-eye"></i>'; // Volta o ícone para o de revelar a senha
+      }
+    });
+
+    // Função para revelar a senha no cadastro
+    document.getElementById("revealPasswordCadastro").addEventListener("click", function() {
+      const senhaInput = document.getElementById("senhaCadastro");
+      if (senhaInput.type === "password") {
+        senhaInput.type = "text";
+        this.innerHTML = '<i class="bi bi-eye-slash"></i>';
+      } else {
+        senhaInput.type = "password";
+        this.innerHTML = '<i class="bi bi-eye"></i>';
+      }
+    });
+  </script>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

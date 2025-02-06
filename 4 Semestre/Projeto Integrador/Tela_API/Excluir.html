@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Tela de exclusão</title>
+<body>
+    <!-- Criamos um formulário para exclusão -->
+    <form name = "Excluir">
+        <p2>Excluir dados através do api construído:</p2><br/><br/>        
+        <!-- RA precisa, pois é através RA para excluir o registro no BD -->
+        RA: <br/>
+        <input type="number" name="numRA">
+        <br/>
+        Nome: <br/>
+        <input type="text" name="txtNome">
+        <br/>
+        e-mail: <br/>
+        <input type="text" name="txtEmail">
+        <br/>
+        Telefone: <br/>
+        <input type="text" name="txtTelefone">
+        <br/><br/>
+        <!-- Criamos dois botões para realizar as operações: buscar e excluir -->
+        <input type="button" name="btBuscar" value="Buscar" onclick="buscar(event, this)">
+        <input type="button" name="btExcluir" value="Excluir" onclick="excluir(event, this)">
+        <br/>        
+    </form>
+    <!-- Iniciamos a programação JavaScript -->
+    <script type="text/javascript" >
+        /* Lógica de algoritmos: Buscar dados primeiro, depios exclui-los !!! */
+        //Criamos uma função (subprograma) para buscar os dados no BD (xampp-MySQL)
+        function buscar(event, form){
+            //Este comando é para prevenir o cancelamento de evento
+            event.preventDefault();
+            //variáveis para obter os dados digitados
+            const ra  = parseInt(document.Excluir.numRA.value);         
+         
+            if ( ra != "" ) {            
+                    //Endereço do api que construimos
+                    const URL = 'http://localhost/api_CRUD/api/Alunos/'+ra;                   
+
+                    fetch( URL , {method: 'GET'} ) //Método "GET"
+                        //para transformar a resposta de texto para JSON
+                        /*Uma Arrow function é exatamente como uma função/callback normal */   
+                        .then(resp => resp.json())                                    
+                        .then(data => mostrarResposta(data))
+                        //Além disso podemos utilizar o método catch() para tratar erros.
+                        //e a mensagem de erros estará console
+                        .catch(erro => console.log(erro));            
+            }
+        }
+        //Criamos uma função (subprograma) para excluir os dados no BD (xampp-MySQL)
+        function excluir(event, form){
+            //Este comando é para prevenir o cancelamento de evanto
+            event.preventDefault();
+            //variáveis para obter os dados digitados
+            const ra = parseInt(document.Excluir.numRA.value);
+
+            if ( ra != "" ) {            
+                    //Endereço do api que construimos
+                    const URL = 'http://localhost/api_CRUD/api/Alunos/'+ra;                    
+
+                     fetch( URL , {method: 'DELETE'} ) //Método "DELETE"
+                        //para transformar a resposta de texto para JSON
+                        /*Uma Arrow function é exatamente como uma função/callback normal */   
+                        .then(resp => resp.json())                                    
+                        .then(data => mostrarRespostaDelete(data))
+                        //Além disso podemos utilizar o método catch() para tratar erros.
+                        //e a mensagem de erros estará console
+                        .catch(erro => console.log(erro));            
+            }
+        }
+        //Uma função para mostar uma mensagem e os dados buscados
+        function mostrarResposta(data){
+            console.log(data) ;       
+            if(data.status != 'sucess'){
+                alert("Aluno não encontrado!!!");
+            } else {
+                //Colocando os dados buscados nos campos do formulário para serem excluidos
+                document.Excluir.txtNome.value = data.information.nome;
+                document.Excluir.txtEmail.value = data.information.email;
+                document.Excluir.txtTelefone.value = data.information.telefone;                
+            }
+        }
+        //Uma função para mostar uma mensagem e limpar os dados nos campos do formulário
+        function mostrarRespostaDelete(data){
+            console.log(data) ;       
+            if(data.status == "success"){
+                alert("Dados excluído com sucesso!!!");
+            } else {
+                alert("Erro ao excluir!!!");
+            }
+            //limpar os dados nos campos do formulário
+            document.Excluir.numRA.value = "";
+            document.Excluir.txtNome.value = "";
+            document.Excluir.txtEmail.value = "";
+            document.Excluir.txtTelefone.value = "";            
+        }        
+    </script>
+</body>
+</html>

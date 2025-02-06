@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Consulta</title>
+</head>
+<body>
+    <!-- Criamos um formulário para consulta -->
+    <form name = "Consultar">
+        <p2>Consultando dados através código do Aluno:</p2><br/><br/>        
+        <!-- Código precisa, pois através dele(PK) para buscar dados -->
+        Código: <br/>
+        <input type = "number" name = "numRA">
+        <br/>
+        Nome: <br/>
+        <input type = "text" name = "txtNome">
+        <br/>
+        e-mail: <br/>
+        <input type = "text" name = "txtEmail">
+        <br/>
+        Telefone: <br/>
+        <input type = "text" name = "txtTelefone">
+        <br/><br/>
+        <!-- Criamos um botão para a operação de busca -->
+        <input type = "button" name = "btBuscar" value = "Consultar" onclick = "buscar(event, this)">
+        <!-- Criamos um butão para limpar os campos -->
+        <input type = "reset" value = "Limpar">
+        <br/>        
+    </form>
+    <!-- Iniciamos a programação JavaScript -->
+    <script type="text/javascript">
+        //Criamos uma função (subprograma) para buscar os dados no BD (xampp-MySQL)
+        function buscar(event, form){
+            //Este comando é para prevenir o cancelamento de evento: evento de click->buscar os dados
+            event.preventDefault();
+            //variável ra é um número inteiro. parseInt(...) converter texto para inteiro
+            const codigo = parseInt(document.Consultar.numRA.value);   
+           
+            if ( codigo != "" ) { //RA não pode ser null, pois através dele para buscar dados
+                    //Endereço do api que construimos
+                    const URL = 'http://localhost/api_CRUD/api/Alunos/'+codigo;
+                    //fetch(URL , options)
+                    fetch( URL , {method: 'GET'} )                        
+                        /*Uma Arrow function é exatamente como uma função/callback normal */ 
+                        //para transformar a resposta de texto puro para JSON  
+                        .then(resp => resp.json())                                    
+                        .then(data => mostrarResposta(codigo,data))
+                        //Além disso podemos utilizar o método catch() para tratar erros.
+                        //e a mensagem de erros estará console
+                        .catch(erro => console.log(erro));            
+            }
+        }
+        //Uma função para mostar uma mensagem e os dados buscados
+        function mostrarResposta(codigo,data){
+            if (codigo != data.information.codigo){
+                alert("Sem registro com este código : " + codigo + " !!");
+            }
+            else {
+                alert("Dados buscados com sucesso !!"); //pode ter ou não
+                console.log(data) ;
+                //colocando os dados buscados nos campos do formulário  
+                document.Consultar.txtNome.value = data.information.nome;
+                document.Consultar.txtEmail.value = data.information.email;
+                document.Consultar.txtTelefone.value = data.information.telefone; 
+            }         
+        }
+    </script>
+</body>
+</html>

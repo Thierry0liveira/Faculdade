@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_consultar"
+            android:title="Criar"
+            android:icon="@drawable/bar_code"/>
+        <item
+            android:id="@+id/nav_requisicao"
+            android:title="Consultar"
+            android:icon="@drawable/pedido"/>
+        <item
+            android:id="@+id/nav_perdas"
+            android:title="Alterar"
+            android:icon="@drawable/lixeira"/>
+        <item
+            android:id="@+id/nav_furtos"
+            android:title="Excluir"
+            android:icon="@drawable/furto"/>
+        <item
+            android:id="@+id/nav_cadastroProdutos"
+            android:title="Cadastro de Produtos"
+            android:icon="@drawable/produto"/>
+    </group>
+</menu>

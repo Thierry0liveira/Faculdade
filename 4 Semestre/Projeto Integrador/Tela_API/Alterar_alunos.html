@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Tela de Alteração</title>
+</head>
+<body>
+    <!-- Criamos um formulário para alteração de dados -->
+    <form name = "Alterar">
+        <br>
+        <p2>Alterar os dados através do código do de Alunos:</p2><br><br>
+        Código : <br>
+        <input type = "number" name = "numCodigo"><br>
+        Nome : <br>
+        <input type = "text" name = "txtNome"><br>
+        e-mail : <br>
+        <input type = "text" name = "txtEmail"><br>
+        Telefone : <br>
+        <input type = "text" name = "txtTelefone"><br><br>
+        <!-- Criamos 3 botões -->
+        <input type = "button" name = "btBuscar" value = "Buscar" onclick = "buscar(event,this)">
+        <input type = "button" name = "btAlterar" value = "Alterar" onclick = "alterar(event,this)">
+        <input type = "reset"  value = "Limpar">
+    </form>
+    <!-- Iniciamos a programação em javascript -->
+    <script type = "text/javascript">
+        //Criamos a função: buscar(event,this)
+        function buscar(event,form) {
+            event.preventDefault(); //para evitar o cancelamento de evento           
+                const codigo = parseInt(document.Alterar.numCodigo.value);            
+                if ( codigo != "" ) { //Codigo não pode ser null, pois através dele para buscar dados                    
+                        const URL = 'http://localhost/api_crud/api/Alunos/'+codigo;                    
+                        fetch( URL , {method: 'GET'} ) //usando protocolo "GET"                       
+                            .then(resp => resp.json())                                    
+                            .then(data => mostrarRespostaBuscar(codigo,data))                        
+                            .catch(erro => console.log(erro));            
+                }         
+        }       
+        //Criamos a função : mostrarRespostaBuscar(codigo,data)
+        function mostrarRespostaBuscar(codigo,data){
+            if (codigo != data.information.codigo){
+                alert("Sem registro com este código " + codigo + " !");
+            }
+            else {
+                //alert("Dados buscados com sucesso !!"); 
+                //pode ter ou não
+                console.log(data) ;
+                //colocando os dados buscados nos campos do formulário  
+                document.Alterar.txtNome.value = data.information.nome;
+                document.Alterar.txtEmail.value = data.information.email;
+                document.Alterar.txtTelefone.value = data.information.telefone; 
+            }         
+        }
+        //Criamos a função: alterar(event,this)
+        function alterar(event, form) {
+            event.preventDefault(); //para evitar o cancelamento do evento
+            
+            //As variáveis para armazenar os dados digitados por usuário
+            const codigo_aluno = parseInt(document.Alterar.numCodigo.value);
+            const nome_aluno = document.Alterar.txtNome.value;
+            const email_aluno = document.Alterar.txtEmail.value;
+            const telefone_aluno = document.Alterar.txtTelefone.value;
+            //Uma lista para armazenar o conjunto de dados obtidos em formato JSON
+            const dados = {
+                codigo: codigo_aluno,
+                nome: nome_aluno,
+                email: email_aluno,
+                telefone: telefone_aluno,
+            };
+            //Uma lista para os dados de configuração
+            const options = {
+                method: 'PUT', //o método 'put' é para alterar os dados
+                header: {'Content-Type':'application/json',},
+                //O comando JSON.stringify(dados) converter o formato JSON para texto normal
+                body: JSON.stringify(dados),
+            };
+            if (codigo_aluno != ""){
+                const URL = 'http://localhost/api_CRUD/api/Alunos/'+codigo_aluno; //endereço do api
+                fetch(URL, options)
+                    .then(resp => resp.json())
+                    .then(data => mostrarRespostaAlterar(data))
+                    .catch(erro => console.log(erro));
+            }            
+        }
+        //Criamos a função: mostrarRespostaAlterar(data)
+        function mostrarRespostaAlterar(data) {
+            console.log(data); //pode ter ou não
+            if (data.status == "sucess"){
+                alert("Dados alterados com sucesso !!!");                        
+            }else{
+                alert("Erro ao alterar os dados !!!");
+            }
+            //Limpar os campos no formulário
+            document.Alterar.numCodigo.value = ""; 
+            document.Alterar.txtNome.value = "";
+            document.Alterar.txtEmail.value = "";
+            document.Alterar.txtTelefone.value = "";          
+        }
+    </script>    
+</body>
+</html>

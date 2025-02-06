@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_consultar">
+
+
+    <fragment
+        android:id="@+id/nav_consultar"
+        android:name="com.aula.solidario_net.ui.consultar.ConsultarFragment"
+        android:label="Consultar"
+        tools:layout="@layout/fragment_consultar" />
+
+    <fragment
+        android:id="@+id/nav_furtos"
+        android:name="com.aula.solidario_net.ui.furtos.FurtosFragment"
+        android:label="Furtos"
+        tools:layout="@layout/fragment_furtos" />
+
+    <fragment
+        android:id="@+id/nav_cadastroProdutos"
+        android:name="com.aula.solidario_net.ui.cadastroProdutos.CadastroProdutosFragment"
+        android:label="Cadastro de Produtos"
+        tools:layout="@layout/fragment_cadastro_produtos" />
+
+
+</navigation>

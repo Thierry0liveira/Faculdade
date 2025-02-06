@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solidário.Net - Excluir Voluntário</title>
+  
+  <!-- CSS Global -->
+  <link rel="stylesheet" href="estilo.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container my-5">
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="inserir-logo-aqui.png" alt="Logo" class="d-inline-block align-text-top">
+          Solidário.Net
+        </a>
+        <button class="btn btn-outline-primary" onclick="window.location.href='Login.html'">Entrar / Cadastrar-se</button>
+      </div>
+    </nav>
+
+    <!-- Menu Horizontal -->
+    <nav class="nav justify-content-center mb-4">
+      <a class="nav-link" href="Criar.html">Criar</a>
+      <a class="nav-link" href="Consultar.html">Consultar</a>
+      <a class="nav-link" href="Alterar.html">Alterar</a>
+      <a class="nav-link active" href="Excluir.html">Excluir</a>
+    </nav>
+
+    <!-- Campo de Pesquisa -->
+    <div class="mb-4">
+      <input 
+        type="text" 
+        class="form-control" 
+        id="pesquisarVoluntario" 
+        placeholder="Pesquise o ID do Voluntário">
+    </div>
+
+    <!-- Tabela de Voluntários -->
+    <div class="table-responsive">
+      <table class="table table-bordered text-center">
+        <thead class="table-light">
+          <tr>
+            <th>ID Voluntário</th>
+            <th>Nome</th>
+            <th>Ocupação</th>
+            <th>Horário Disponível</th>
+            <th>Telefone</th>
+            <th>Email</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Manuela</td>
+            <td>Dono de ONG</td>
+            <td>10h às 18h, seg a sex</td>
+            <td>1198025584</td>
+            <td>teste.exem1@gmail.com</td>
+            <td>
+              <button class="btn btn-danger btn-sm">
+                <i class="bi bi-x-circle"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Toni</td>
+            <td>Socorrista</td>
+            <td>10h às 18h, seg a sex</td>
+            <td>1198044455</td>
+            <td>teste.exem2@gmail.com</td>
+            <td>
+              <button class="btn btn-danger btn-sm">
+                <i class="bi bi-x-circle"></i>
+              </button>
+            </td>
+          </tr>
+          <!-- Adicione mais linhas conforme necessário -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+</body>
+</html>

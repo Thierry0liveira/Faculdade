@@ -1,0 +1,15 @@
+MySQL para Login e senha:
+
+- Criado a tabela 'apilogin' com a seguinte estrutura
+
+CREATE TABLE apilogin (
+  codigoLogin int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  login varchar(50) DEFAULT NULL,
+  senha varchar(20) DEFAULT NULL,
+  perfil varchar(50) DEFAULT NULL
+) ;
+
+- Inseri 2 registros na tabela
+
+INSERT INTO apilogin (login, senha, perfil) VALUES ('Adm', 'Adm123', 'ADM');
+INSERT INTO apilogin (login, senha, perfil) VALUES ('Sec', 'Sec123', 'SEC');

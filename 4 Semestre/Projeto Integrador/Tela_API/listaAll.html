@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de todos os Serviços</title>
+    <!-- Criamos estilos para tela usando CSS -->
+    <!-- Centralizar formulário na Tela -->
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image:linear-gradient(90deg,cyan,rgb(255,85,0))
+        }        
+        div{
+            background-color:hsla(0, 0%, 0%, 0.578);            
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding:80px;
+            border-radius:15px;
+            color:#fff
+        }        
+        button{
+            background-color:dodgerblue;
+            border:none;
+            padding:15px;
+            width:100%;
+            border-radius:10px;
+            color:white;
+            font-size:15px
+        }
+        button:hover{
+            background-color:deepskyblue;
+            cursor: pointer;
+        }       
+    </style>
+</head>
+<body>   
+    <!-- Uma tela de lista de serviços  -->
+    <div id = "listServices">
+        <h2>Lista de acesso ao APIs:</h2>
+        <button onclick="window.location.href ='Consultar.html';">Consultar Registro de alunos através RA</button>
+        <br><br>
+        <button onclick="window.location.href ='ConsultarTodos.html';">Consultar Registros de todos alunos</button>
+        <br><br>
+        <button onclick="window.location.href ='Cadastro_alunos.html';">Cadastro de alunos</button>
+        <br><br>                       
+        <button onclick="window.location.href ='Alterar_alunos.html';">Alteração de Cadastro</button>
+        <br><br>           
+        <button onclick="window.location.href ='Excluir.html';" >Exclusão de Cadastro</button>
+        <br><br>
+        <button onclick="window.location.href ='LoginV2.html';">Voltar</button>             
+    </div>    
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tela de Login e Senha</title>
+    <!-- Criamos estilos para tela usando CSS -->
+    <!-- Centralizar formulário na Tela -->
+    <style>
+        body{ 
+            font-family: Arial, Helvetica, sans-serif; 
+            background-image:linear-gradient(90deg,cyan,rgb(255,85,0))
+        }        
+        form{
+            background-color:rgba(0,0,0,0.8);            
+            position: absolute; 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding:80px;
+            border-radius:15px;
+            color:#fff
+        }
+        input{
+            padding:15px;
+            border:none;
+            outline:none;            
+            border-radius:5px;
+            font-size:15px
+        }
+        button{
+            background-color:dodgerblue;
+            border:none;
+            padding:15px;
+            width:100%;
+            border-radius:10px;
+            color:white;
+            font-size:15px
+        }
+        button:hover{
+            background-color:deepskyblue;
+            cursor: pointer;
+        }
+        #mensagem{
+            margin-top: 20px;
+            color: red;
+            font-size: 1.2rem;
+        }        
+    </style>
+</head>
+<body>
+    <!--Criamos um container div ("conteudo") junto com formulário para login e senha -->
+    <div id = "conteudo">
+        <form name = "form1">
+            <fieldset>
+                <h2>Acesso aos APIs</h2>                
+                Login: <br><br>
+                <input type = "text" name = "txtLogin"><br><br>
+                Senha: <br><br>
+                <input type = "password" name = "txtSenha"><br><br>
+                <!--Criamos um botão para realizar operação que exibe uma lista de serviços (apis)-->                
+                <button onclick = "buscar(event, this)">Entrar </button> <br>
+            </fieldset>
+            <div id = "mensagem"></div>
+        </form>
+    </div>   
+    <!-- Iniciamos a Programação em javaScript -->
+    <script type = "text/javascript">
+        var perfil=""; //inicializar com valor = " "
+        //Um subprograma para buscar login e senha no BD 
+        function buscar(event, form){
+            //Este comando é para prevenir o cancelamento do evanto
+            event.preventDefault();
+            //variáveis para obter os dados digitados
+            const login  = document.form1.txtLogin.value;
+            const senha  = document.form1.txtSenha.value;
+              
+            //uma lista para armazenar conjunto de dados obtidos em formato JSON
+            const dados = { 
+                login: login,
+                senha: senha
+            };
+            //uma lista para dados de configuração
+            const options = {
+                method: 'POST', //método 'post': para enviar os dados
+                headers: {
+                'Content-Type': 'application/json',            
+                },
+                body: JSON.stringify(dados), //formato JSON linear
+            };
+
+            if (login != "" && senha != "") { //se os valores não são vazios 
+                    // caminho de acesso ao login da sua maquina          
+                     const URL = 'http://localhost/api_crud/api/Login';                      
+                     fetch(URL , options)//comunicar com BD e realizar a operação de acordo com método definido
+                        .then(resp => resp.json())                                    
+                        .then(data => mostrarResposta(data))
+                        .catch(erro => console.log(erro));            
+            }
+        }
+        //Uma função (subprograma) para avalidar login & senha e mostrar os resultados
+        function mostrarResposta(data){
+            console.log(data) ;       
+            if(data.status == "error"){ // se não encontrou o login
+                document.getElementById("mensagem").textContent =  data.information ;     
+            } else {
+                perfil = data.information.perfil ; // pega o perfil que retornou do Banco de Dados                
+                //O método .includes é para verificar se contem a palavra 'adm'
+                if (perfil.toLowerCase().includes("adm")){ 
+                    location.href = "listaAll.html";                    
+                }
+                else 
+                    location.href = "listaSec.html"; 
+            }
+        }
+    </script>
+</body>
+</html>

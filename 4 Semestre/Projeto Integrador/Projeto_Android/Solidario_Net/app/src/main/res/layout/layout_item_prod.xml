@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:id="@+id/txtCONPRODNome"/>
+
+    <TextView
+        android:id="@+id/txtCONPRODPreco"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:textSize="80dp" />
+</LinearLayout>
