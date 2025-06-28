@@ -1,0 +1,51 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class GPS {
+	private int GPSID;
+    private OS ordemID;
+    private double latitude;
+    private double longitude;
+    private Date dataatualizacaoGPS;
+    
+    public int getGPSID() {
+        return gpsID;
+    }
+
+    public void setLocalizacaoID(int localizacaoID) {
+        this.localizacaoID = localizacaoID;
+    }
+
+    public int getOrdemID() {
+        return ordemID;
+    }
+
+    public void setOrdemID(int ordemID) {
+        this.ordemID = ordemID;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public Date getDataHora() {
+        return dataHora;
+    }
+
+    public void setDataHora(Date dataHora) {
+        this.dataHora = dataHora;
+    }
+}

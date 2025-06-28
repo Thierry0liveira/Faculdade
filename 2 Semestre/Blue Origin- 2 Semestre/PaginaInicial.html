@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Home Page</title>
+    <style>
+    #menu{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: rgb(0, 183, 255);;
+    font-size: 30px;
+    font-family: arial;
+    text-decoration: none;
+    margin-top:right;
+    background-color: transparent;
+    border-color: blue;
+    cursor: pointer;
+    
+    }
+    #globo{
+    position: absolute;
+    margin-top: 150px;
+    right: 200px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url(https://2.bp.blogspot.com/-VO8x2IWerQw/Vlxeb_ZKRxI/AAAAAAAAB5I/KhX5ZL6v3hw/s1600/Mapa17.png);
+    background-size: cover;
+    box-shadow: -25px -25px 25px black inset, 10px 10px 30px white inset, 0px 0px 20px #3a86ff;
+    animation: rotate 60s linear infinite;
+    }
+    @keyframes rotate{
+    to{background-position: 100%;}
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cabecalho"> 
+            <a href="PaginaInicial.html" class="home">Blue Origin </br> Para o benefício da Terra</a>
+            <a href="menu.html" id="menu">MENU</a>
+        </div>
+        <div class="conteudo"> <h1>BEM VINDO A  </br> </br> BLUE ORIGIN</h1>
+            <div id="globo"></div>
+        </div>
+        <div class="rodape"></div>
+    </div>
+</body>
+</html>

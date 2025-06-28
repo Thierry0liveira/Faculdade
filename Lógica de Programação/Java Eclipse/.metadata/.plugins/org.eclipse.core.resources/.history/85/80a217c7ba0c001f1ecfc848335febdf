@@ -1,0 +1,17 @@
+package aplicativo;
+
+public class Usuarios {
+	
+	public int user_ID;
+	public String nome;
+	public String email;
+	public String senha;
+	public String perfil;
+	
+	public int getuser_ID() {
+		return this.user_ID;
+	}
+	public void setuser_ID(int _id) {
+		this.user_ID = _id;
+	}
+}

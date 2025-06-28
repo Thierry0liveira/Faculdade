@@ -1,0 +1,6 @@
+nome=str(input('Digite o seu nome: '))
+idade=int(input('Digite sua idade: '))   
+email=input('Digite seu e-mail: ')
+#print('Olá,',nome,'sua idade é',idade,'e seu email',email)
+print(f'Olá,{nome}, sua idade é {idade} e seu e-mail {email}')
+print(type(nome), type(idade),type(email))

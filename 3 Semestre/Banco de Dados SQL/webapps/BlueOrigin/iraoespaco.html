@@ -1,0 +1,357 @@
+<HTML lang="pt-br" >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Ir ao Espaço</title> 
+    </head>
+    <body >
+        <div class="container">
+            <div class="cabecalho">
+                <a href="PaginaInicial.html" class="home">Blue Origin </br> Para o benefício da Terra</a>
+                <h2>IR AO ESPAÇO</h2>
+                <p><strong>Tornando o Impossível em Inevitável</strong></p>
+                <a href="menu.html" id="menu">MENU</a>
+            </div>
+
+            <div class="conteudo">
+
+                <div id="textos">
+                    <div id="esquerda"> 
+                        <img src="https://img.nsctotal.com.br/wp-content/uploads/2022/10/planeta-terra-vista-do-espaco-1.jpg" alt="Terra vista espacial">
+                    </div>
+
+                    <form method="post" name="form" action="grava.jsp">
+                        <div id="div1" class="divs" > <h2>Inscreva-se</h2></br> </br>Para saber mais sobre as </br> atualizações da viagem espacial e </br> para as vendas futuras de passagens.</br></br></br> </br>                        
+                            <input type="text" name="txtNome" id="txtnome" maxlength="35" placeholder="Nome">
+                            <span id="erroNome"></span> 
+                            &nbsp;&nbsp;&nbsp;
+                            <input type="text" name="txtEmail" id="txtemail" maxlength="35" placeholder="E-mail">
+                            <span id="erroEmail"></span>
+                            </br> </br></br>
+                            <input type="date" name="txtDate" id="txtdate">
+                            <span id="errodate"></span>
+
+                            &nbsp;&nbsp;&nbsp;
+                        
+                            <select name="txtGenero" id="txtgenero" required>
+                            <option value="" disabled selected> Gênero</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                            <option value="O">Outro</option>
+                            </select>
+                            <span id="errogenero"></span>
+                            </br> </br> </br>
+
+                            <input type="text" name="txtNacio" maxlength="35" placeholder="Nacionalidade" id="txtnacio">
+                            <span id="erronacio"></span>
+                            </br> </br> </br>
+
+                            &nbsp;&nbsp;&nbsp;
+
+                            <input type="text" name="txtSenha" maxlength="35" placeholder="Senha" id="txtsenha">
+                            <span id="errosenha"></span>
+                            </br> </br> </br>
+
+                            Aceito os termos
+                            <input type="checkbox" name="txtCheck" id="txtcheck" value="c">
+                            <span id="erroCheck"></span>
+                            <br> <br>
+                        
+                            <input type="button" value="PRÓXIMO>>>" onclick="verificar1()">
+                            <br><br>
+                        </div>
+
+                        <div id="div2" class="divs" style="display: none;"> <h2>Em que está Interessado(a)?</h2> </br> </br> </br> </br> </br>
+                            <table width="500" height="200" align="center" id="tabela">
+                                <tr align="center">
+                                    <!-- Professor aqui fiquei em duvida de como testar pra saber se funciona para salvar a escolha dele no banco-->
+
+                                    <td> <button type="submit" id="linknoticia" class="txtlink"><h3>Noticias e Atualizações Sobre a Viagem Espacial</h3></button></td> 
+
+                                    <td><button onclick="mudardiv()" id="linkvenda" class="txtlink"><h3>Vendas Futuras de Ingressos</h3></button></td>                                   
+                                </tr>
+                            </table>
+                            </br></br>
+                        </div>
+
+                        <div id="div3" class="divs" style="display: none;"> <h2>Inscreva-se</h2>  <p>Só mais alguns detalhes.</p>
+                            <input type="text" name="txtTelefone" maxlength="35" placeholder="Telefone" id="txttelefone">
+                            <span id="errotelefone"></span>
+                            </br></br>
+
+                            <input type="text"name="txtEndereco" maxlength="30" placeholder="Endereço" style="width: 500px" id="txtendereco">
+                            <span id="erroendereco"></span>
+                            </br></br>
+
+                            <label for="assentos">Escolha os assentos:</label>
+                            <select name="assentos[]" multiple="multiple required" id="assentos" class="assentos">
+                                <option value="A1">A1</option>
+                                <option value="A2">A2</option>
+                                <option value="A3">A3</option>
+                                <option value="A4">A4</option>
+                                <option value="A5">A5</option>
+                                <option value="A6">A6</option>
+                            </select>
+                            <span id="erroassento"></span>
+                            </br>
+
+                            Pagamento: <br>
+
+                            <input type="text" name="txtTitular" maxlength="30" placeholder="Nome do Titular" style="width: 450px" id="txtnometitular">
+                            <span id="erronometitular"></span>
+                            </br></br>
+
+                            <input type="text"  maxlength="14" name="txtCpf" placeholder="CPF do Titular" id="txtcpf">
+                            <span id="errocpf"></span>
+                            &nbsp;&nbsp;&nbsp;
+
+                            <input type="text" name="txtNumcartao" placeholder="Número do Cartão" id="txtnumerocartao">
+                            <span id="erronumerocartao"></span>
+                            <br> <br>
+
+                            <input type="text" name="txtVenccartao" placeholder="Vencimento" style="width: 100px" id="txtvenccartao">
+                            <span id="errovenccartao"></span> 
+                            &nbsp;&nbsp;&nbsp;
+
+                            <input type="text"  maxlength="3" name="txtCvv" placeholder="CVV" style="width: 40px" id="txtcvv">
+                            <span id="errocvv"></span>
+                            </br></br>
+
+                            <input type="submit" value="Confirmar Pagamento" onclick="verificar4()">                   
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="rodape"></div>
+        </div>
+
+        <script>
+            //Deixar o campo branco quando tiver correto
+            function limpar(){
+                document.getElementById("txtnome").style.backgroundColor = "white";
+                document.getElementById("txtcheck").style.backgroundColor = "white";
+                document.getElementById("txtemail").style.backgroundColor = "white";
+                document.querySelector("#erroNome").textContent = "";
+                document.querySelector("#erroCheck").textContent = "";
+                document.querySelector("#erroEmail").textContent = "";
+                document.getElementById("txtdate").style.backgroundColor = "white";
+                document.getElementById("txtgenero").style.backgroundColor = "white";
+                document.getElementById("txtnacio").style.backgroundColor = "white";
+                document.querySelector("#errodate").textContent = "";
+                document.querySelector("#errogenero").textContent = "";
+                document.querySelector("#erronacio").textContent = "";
+                document.getElementById("txtsenha").style.backgroundColor = "white";
+                document.querySelector("#errosenha").textContent = "";
+            }
+            function limpar4(){
+                document.getElementById("txttelefone").style.backgroundColor = "white";
+                document.getElementById("txtendereco").style.backgroundColor = "white";
+                document.getElementById("txtnometitular").style.backgroundColor = "white";
+                document.getElementById("txtcpf").style.backgroundColor = "white";
+                document.getElementById("txtnumerocartao").style.backgroundColor = "white";
+                document.getElementById("txtvenccartao").style.backgroundColor = "white";
+                document.getElementById("txtcvv").style.backgroundColor = "white";
+                document.querySelector("#errotelefone").textContent = "";
+                document.querySelector("#erroendereco").textContent = "";
+                document.querySelector("#erronometitular").textContent = "";
+                document.querySelector("#errocpf").textContent = "";
+                document.querySelector("#erronumerocartao").textContent = "";
+                document.querySelector("#errovenccartao").textContent = "";
+                document.querySelector("#errocvv").textContent = "";
+                
+            }
+            //Abrir e fechar as DIV's
+            let currentDiv = 1;
+
+            function mudardiv() {
+                event.preventDefault();
+                // Oculta a div atual
+                document.getElementById('div' + currentDiv).style.display = 'none';
+
+                // Avança para a próxima div ou reinicia se atingir a última
+                currentDiv = (currentDiv % 3) + 1;
+
+                // Exibe a nova div atual
+                document.getElementById('div' + currentDiv).style.display = 'block';
+            }
+
+            //Primeiro verifica-se se todos os campos estão preenchidos
+            function verificar1(){
+                limpar();
+                var enviar = true;
+    
+                var nome = document.getElementById("txtnome").value;
+                if( nome.length == 0 ){
+                    enviar = false;
+    
+                      document.getElementById("txtnome").style.backgroundColor = "red";
+                      //queryselector encontra itens variados não so pelo id um buscador geral o textcontent é para inserir o texto de erro
+                      document.querySelector("#erroNome").textContent = "Preencha o campo nome";
+                }
+    
+                var checkbox = document.getElementById("txtcheck");
+                if( !checkbox.checked){
+                    enviar = false;
+                    document.getElementById("txtcheck").style.backgroundColor = "red";
+                    document.querySelector("#erroCheck").textContent = "Confirme os Termos";  
+                }
+    
+                var email = document.getElementById("txtemail").value;
+                // indexOf reotrna a posição exata do que se quer encontrar e caso não encontre sempre retornará -1 começa a contar do 0
+                if(email.indexOf("@") < 0  ){
+                    enviar = false;
+                    document.getElementById("txtemail").style.backgroundColor = "red";
+                    document.querySelector("#erroEmail").textContent = "Preencha o campo email";
+                }
+                var datanasc = document.getElementById("txtdate").value;
+                if(!datanasc){
+                    enviar = false;
+                    document.getElementById("txtdate").style.backgroundColor = "red";
+                    //queryselector encontra itens variados não so pelo id um buscador geral o textcontent é para inserir o texto de erro
+                    document.querySelector("#errodate").textContent = "Preencha o campo Data de Nascimento";
+                }
+
+                const dataNascimento = document.getElementById("txtdate").value;
+                 // Obtém a data atual
+                const hoje = new Date();
+
+                // Cria um objeto Date para a data de nascimento
+                const nascimento = new Date(dataNascimento);
+
+                // Calcula a idade em anos
+                const idade = (hoje - nascimento) / (365.25 * 24 * 60 * 60 * 1000);
+
+                // Verifica se a idade é maior ou igual a 18 anos
+                if (idade < 18) {
+                    enviar = false;    
+                    document.getElementById("txtdate").style.backgroundColor = "red";
+                    //erro pra menor de 18
+                    document.querySelector("#errodate").textContent = "Idade Inferior a 18";
+                    }
+    
+                var genero = document.getElementById("txtgenero");
+                var generoselecionado = genero.value;
+                if( !generoselecionado){
+                    enviar = false;
+                    document.getElementById("txtgenero").style.backgroundColor = "red";
+                    document.querySelector("#errogenero").textContent = "Preencha o campo Genero";  
+                }
+    
+                var nacionalidade = document.getElementById("txtnacio").value;
+                if(nacionalidade.length == 0  ){
+                enviar = false;
+                document.getElementById("txtnacio").style.backgroundColor = "red";
+                document.querySelector("#erronacio").textContent = "Preencha o campo Nacionalidade";
+                }
+
+                var senha = document.getElementById("txtsenha").value;
+                if(nacionalidade.length == 0  ){
+                enviar = false;
+                document.getElementById("txtsenha").style.backgroundColor = "red";
+                document.querySelector("#errosenha").textContent = "Preencha o campo Senha";
+                }
+    
+                if(enviar){
+                   mudardiv();
+                }     
+            }
+            function verificar4(){
+                limpar4();
+                var enviar = true;
+    
+                var datanasc = document.getElementById("txtdate").value;
+                if(!datanasc){
+                    enviar = false;    
+                      document.getElementById("txtdate").style.backgroundColor = "red";
+                      //queryselector encontra itens variados não so pelo id um buscador geral o textcontent é para inserir o texto de erro
+                      document.querySelector("#errodate").textContent = "Preencha o campo Data de Nasc.";
+                }
+    
+                var genero = document.getElementById("txtgenero");
+                var generoselecionado = genero.value;
+                if( !generoselecionado){
+                    enviar = false;
+                    document.getElementById("txtgenero").style.backgroundColor = "red";
+                    document.querySelector("#errogenero").textContent = "Preencha o campo Genero";  
+                }
+    
+                var nacionalidade = document.getElementById("txtnacio").value;
+                if(nacionalidade.length == 0  ){
+                    enviar = false;
+                    document.getElementById("txtnacio").style.backgroundColor = "red";
+                    document.querySelector("#erronacio").textContent = "Preencha o campo Nacionalidade";
+                }
+
+                var telefone = document.getElementById("txttelefone").value;
+                if(telefone.length == 0  ){
+                    enviar = false;
+                    document.getElementById("txttelefone").style.backgroundColor = "red";
+                    document.querySelector("#errotelefone").textContent = "Preencha o campo Telefone";
+                }
+
+                var endereco = document.getElementById("txtendereco").value;
+                if(endereco.length == 0  ){
+                    enviar = false;
+                    document.getElementById("txtendereco").style.backgroundColor = "red";
+                    document.querySelector("#erroendereco").textContent = "Preencha o campo Endereço";
+                }
+
+                var nometitular = document.getElementById("txtnometitular").value;
+                if(nometitular.length == 0  ){
+                    enviar = false;
+                    document.getElementById("txtnometitular").style.backgroundColor = "red";
+                    document.querySelector("#erronometitular").textContent = "Preencha o campo Nome do Titular";
+                }
+
+                var cpf = document.getElementById("txtcpf").value;
+                if(cpf.length == 0  ){
+                    enviar = false;
+                    document.getElementById("txtcpf").style.backgroundColor = "red";
+                    document.querySelector("#errocpf").textContent = "Preencha o campo CPF do Titular";
+                }
+
+                var numerocartao = document.getElementById("txtnumerocartao").value;
+                if(numerocartao.length == 0  ){
+                    enviar = false;
+                    document.getElementById("txtnumerocartao").style.backgroundColor = "red";
+                    document.querySelector("#erronumerocartao").textContent = "Preencha o campo Nº do Cartão";
+                }
+
+                var venccartao = document.getElementById("txtvenccartao").value;
+                if(venccartao.length == 0  ){
+                    enviar = false;
+                    document.getElementById("txtvenccartao").style.backgroundColor = "red";
+                    document.querySelector("#errovenccartao").textContent = "Preencha o campo Vencimento";
+                }
+
+                var cvv = document.getElementById("txtcvv").value;
+                if(cvv.length == 0  ){
+                    enviar = false;
+                    document.getElementById("txtcvv").style.backgroundColor = "red";
+                    document.querySelector("#errocvv").textContent = "Preencha o campo CVV";
+                }
+
+                var assentos = document.querySelectorAll(".assentos");
+                var assentosselecionados = [];
+
+                //Verificar se ao menos um assento foi selecionado
+                for(var i = 0; i < assentos.length; i++){
+                    if(assentos[i].checked){
+                        assentosselecionados.push(assentos[i].value);
+                    }
+                }
+
+                if(assentosselecionados.length <= 0){
+                    //Nehum assento selecionado
+                    document.getElementsByClassName("assentos").style.backgroundColor = "red";
+                    document.querySelector("#erroassento").textContent = "Selecione ao menos um assento";
+                }
+    
+                if(enviar){
+                   document.form.submit(); 
+                }     
+            }  
+        </script>
+    </body>
+</html>

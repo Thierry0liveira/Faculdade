@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+</head>
+<body>
+    <form method="post" name="form1" action="grava.jsp"><!--#method seleciona post para o tipo #name da um nome ao formulário#action que fala pra onde o formulário vai action.jsp é javascript-->
+        Nome:
+        <input type="text" name="txtnome" maxlength="10"> <!--#input seleciona o tipo de dado que vai ser digitado no campo #maxlenght controle o maximo de caracteres-->
+        <br/>
+        Número:
+        <input type="number" name="txtnumero">
+        <br/>
+        Senha:
+        <input type="password" name="txtsenha" maxlength="5">
+        <br/>
+        Mensagem: <br/>
+        <textarea name="txtarea" cols="40" rows="6"></textarea>
+        <br/>
+        Estado:
+        <select name="estado" id="">
+            <option value="vazio"></option>
+            <option value="sp">São Paulo</option>
+            <option value="rj">Rio de Janeiro</option>
+            <option value="ba">Bahia</option>
+        </select>
+        <br/>
+        Pagamento:
+        <input type="radio" name="pgto" value="1">à vista <!--#o memso nome faz com que não se possa selecionar mais de um campo e é através do valor q confirma a opção escolhida-->
+        <input type="radio" name="pgto" value="3">3x
+        <input type="radio" name="pgto" value="6">6x
+        <br/>
+        Time:
+        <input type="checkbox" name="time" value="p">Palmeiras
+        <input type="checkbox" name="time" value="s">São Paulo
+        <input type="checkbox" name="time" value="c">Corinthians
+        <input type="checkbox" name="time" value="ss">Santos
+        <br/>
+        <input type="reset" value="limpar"> <!--#type reset limpa todos os campos #type submit envia os dados dos campos para quem você definiu no action-->
+        <input type="submit" value="enviar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+package aplicativo;
+
+public class Usuarios {
+	
+	public int user_ID;
+	public String nome;
+	public String email;
+	public String senha;
+	public String perfil;
+	
+	//Gets e Sets
+	public int getUser_ID() {
+		return this.user_ID;
+	}
+	public void setUser_ID(int _id) {
+		this.user_ID = _id;
+	}
+	
+	public String getNome() {
+		return this.Nome;
+	}
+	public void setNome(String Nome) {
+		this.Nome = Nome;
+	}
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,84 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class Denuncias {
+	private int denunciaID;
+    private Usuarios userID;
+    public String descricaodenuncias;
+    public String tipoproblema;
+    private String status;
+    private Date datachamado;
+    private Date dataatualizacao;
+    private float custoOS;
+    
+    public int getDenunciaID() {
+        return denunciaID;
+    }
+    public void setDenunciaID(int denunciaID) {
+        this.denunciaID = denunciaID;
+    }
+    public Usuarios getUserID() {
+        return this.userID;
+    }
+    public void setUserID(Usuarios userID) {
+        this.userID = userID;
+    }
+    public String getDescricao() {
+        return this.descricaodenuncias;
+    }
+    public void setDescricao(String descricaodenuncias) {
+        this.descricaodenuncias = descricaodenuncias;
+    }
+
+    public String getTipoproblema() {
+        return this.tipoproblema;
+    }
+
+    public void setTipoproblema(String tipoproblema) {
+        this.tipoproblema = tipoproblema;
+    }
+    
+    public String getStatus() {
+        return this.status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Date getDatachamado() {
+        return this.datachamado;
+    }
+
+    public void setDatachamado(Date datachamado) {
+        this.datachamado = datachamado;
+    }
+    
+    public Date getDataatualizacao() {
+        return this.dataatualizacao;
+    }
+
+    public void setDataatualizacao(Date dataatualizacao) {
+        this.dataatualizacao = dataatualizacao;
+    }
+    
+    public float getCustoOS() {
+        return this.custoOS;
+    }
+
+    public void setCustoOS(float custoOS) {
+        this.custoOS = custoOS;
+    }
+    protected int ConsultarDenuncias() {
+		System.out.println("ID Denúncia: " + this.getDenunciaID());
+		System.out.println("ID Usuário: " + this.getUserID());
+		System.out.println("Descrição: " + this.getDescricao());
+		System.out.println("Tipo do Problema: " + this.getTipoproblema());
+		System.out.println("Status: " + this.getStatus());
+		System.out.println("Data do Chamado " + this.getDatachamado());
+		System.out.println("Data da Atualização " + this.getDataatualizacao());
+		System.out.println("Custo Total: " + this.getCustoos());
+		return 0;
+	}
+}

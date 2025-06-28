@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Assunto 4 N1/1.0.0": {
+        "runtime": {
+          "Assunto 4 N1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Assunto 4 N1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

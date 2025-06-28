@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #texto{
+            padding: 30px;
+            background-color: lightblue;
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Javascript
+    </h1>
+    <p id="texto">
+        JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma. 
+        Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web.
+    </p>
+
+    <button onclick="mudarcor()">Mudar Cor</button>
+    <button onclick="mudarbackground()">Mudar Cor de Fundo</button>
+    <button onclick="mudaritalico()">Itálico</button>
+    <button onclick="colocarborda()">Colocar Borda</button>
+    <button onclick="zerar()">Reset</button>
+
+    <script>
+        function zerar(){
+            document.getElementById("texto").removeAttribute("style");
+        }
+
+        function mudarcor(){
+            document.getElementById("texto").style.color = "green";
+        }
+
+        function mudarbackground(){
+            document.getElementById("texto").style.background = "yellow";
+        }
+        
+        function mudaritalico(){
+            document.getElementById("texto").style.fontStyle = "italic";
+        }
+
+        function colocarborda(){
+            if(document.getElementById("texto").style.border.length > 0){
+                document.getElementById("texto").removeAttribute("style");
+            }else{
+                document.getElementById("texto").style.border = "3px solid black";
+            }
+            
+        }
+    </script>
+</html>

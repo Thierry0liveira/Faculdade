@@ -1,0 +1,11 @@
+package aula;
+
+public class ContaEspecial extends ContaComum {
+	public double limite;
+	
+	//gets e sets
+	public void setLimite(double _limite) {
+		this.limite = _limite
+	}
+
+}

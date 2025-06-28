@@ -1,0 +1,13 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class GPS {
+	private int GPSID;
+    private int ordemID;
+    private double latitude;
+    private double longitude;
+    private Date dataHora;
+	
+
+}

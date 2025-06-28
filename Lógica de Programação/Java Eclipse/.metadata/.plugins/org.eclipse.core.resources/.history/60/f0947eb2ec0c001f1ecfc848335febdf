@@ -1,0 +1,60 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class AcaoDenuncias {
+	 public int acaoID;
+	 public Denuncias denunciaID;
+	 public Usuarios userID;
+	 public String acao;
+	 public String descricaoacao;
+	 public Date dataacao;
+	 
+	 public int getAcaoID() {
+	        return acaoID;
+	    }
+	    public void setAcaoID(int acaoID) {
+	        this.acaoID = acaoID;
+	    }
+	    public Denuncias getDenunciaID() {
+	        return this.denunciaID;
+	    }
+	    public void setDenunciaID(Denuncias denunciaID) {
+	        this.denunciaID = denunciaID;
+	    }
+	    public Usuarios getUserID() {
+	        return this.userID;
+	    }
+	    public void setUserID(Usuarios userID) {
+	        this.userID = userID;
+	    }
+	    public String getAcao() {
+	        return this.acao;
+	    }
+	    public void setAcao(String acao) {
+	        this.acao = acao;
+	    }
+	    public String getDescricaoacao() {
+	        return this.descricaoacao;
+	    }
+	    public void setDescricaoacao(String descricaoacao) {
+	        this.descricaoacao = descricaoacao;
+	    }
+	    public Date getDataacao() {
+	        return dataacao;
+	    }
+	    public void setDataacao(Date dataacao) {
+	        this.dataacao = dataacao;
+	    }
+	    protected int ConsultarAcao() {
+			System.out.println("ID Ação: " + this.getAcaoID());
+			System.out.println("ID Denúncia: " + this.getDenunciaID());
+			System.out.println("ID Usuário: " + this.getUserID());
+			System.out.println("Responsável: " + this.getResponsavelos());
+			System.out.println("Status: " + this.getStatusos());
+			System.out.println("Data de Criação: " + this.getDatacriacaoos());
+			System.out.println("Data Atualização " + this.getDataatualizacaoos());
+			System.out.println("Custo: " + this.getCustoos());
+			return 0;
+		}
+}

@@ -1,0 +1,13 @@
+package aplicativo;
+
+public class Denuncias {
+	private int denunciaID;
+    private int userID;
+    private String descricao;
+    private String tipoproblema;
+    private String status;
+    private Date datachamado;
+    private Date dataatualização;
+    private float custoordem;
+
+}

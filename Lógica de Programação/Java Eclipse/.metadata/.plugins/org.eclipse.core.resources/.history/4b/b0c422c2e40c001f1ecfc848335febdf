@@ -1,0 +1,58 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class Orcamento {
+	public int orcamentoID;
+    protected Prefeito prefeitoID;
+    public String tipoorcamento;
+    public String avaliacao;
+    public Date dataavaliacao;
+    
+    public int getOrcamentoID() {
+        return orcamentoID;
+    }
+
+    public void setOrcamentoID(int orcamentoID) {
+        this.orcamentoID = orcamentoID;
+    }
+
+    public Prefeito getPrefeitoID() {
+        return this.prefeitoID;
+    }
+
+    public void setPrefeitoID(Prefeito prefeitoID) {
+        this.prefeitoID = prefeitoID;
+    }
+
+    public String getTipoorcamento() {
+        return tipoorcamento;
+    }
+
+    public void setTipoorcamento(String tipoorcamento) {
+        this.tipoorcamento = tipoorcamento;
+    }
+
+    public String getAvaliacao() {
+        return this.avaliacao;
+    }
+
+    public void setAvaliacao(String avaliacao) {
+        this.avaliacao = avaliacao;
+    }
+    public Date getDataavaliacao() {
+        return this.dataavaliacao;
+    }
+
+    public void setDataavaliacao(Date dataavaliacao) {
+        this.dataavaliacao = dataavaliacao;
+    }
+    
+    protected int ConsultarOrcamento() {
+		System.out.println("ID Orçamento: " + this.getOrcamentoID());
+		System.out.println("ID Prefeito: " + this.getPrefeitoID());
+		System.out.println("Email: " + this.getTipoorcamento());
+		System.out.println("Senha: " + this.getSenha());
+		return 0;
+	}
+}

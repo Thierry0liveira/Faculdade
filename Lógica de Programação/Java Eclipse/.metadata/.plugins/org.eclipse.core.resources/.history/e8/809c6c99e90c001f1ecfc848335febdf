@@ -1,0 +1,71 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class Dashboards {
+	protected int dashboardID;
+	public Denuncias denunciaID;
+    protected Secretarios secretarioID;
+    protected Prefeito prefeitoID;
+    public OS ordemID;
+    public String tipodashboard;
+    public String dados;
+    private Date datacriacao;
+    private Date dataatualizacao;
+    
+    public int getDashboardID() {
+        return this.dashboardID;
+    }
+    public void setDashboard(int dashboardID) {
+        this.dashboardID = dashboardID;
+    }
+    
+    public Denuncias getDenunciaID() {
+        return this.denunciaID;
+    }
+    public void setDenunciaID(Denuncias denunciaID) {
+        this.denunciaID = denunciaID;
+    }
+    public Secretarios getSecretarioID() {
+        return this.secretarioID;
+    }
+    public void setSecretarioID(Secretarios secretarioID) {
+        this.secretarioID = secretarioID;
+    }
+    public Prefeito getPrefeitoID() {
+        return this.prefeitoID;
+    }
+    public void setPrefeitoID(Prefeito prefeitoID) {
+        this.prefeitoID = prefeitoID;
+    }
+    public OS getOrdemID() {
+        return this.ordemID;
+    }
+    public void setOrdemID(OS ordemID) {
+        this.ordemID = ordemID;
+    }
+    public String getTipodashboard() {
+        return this.tipodashboard;
+    }
+    public void setTipodashboard(String tipodashboard) {
+        this.tipodashboard = tipodashboard;
+    }
+    public String getDados() {
+        return this.dados;
+    }
+    public void setStatusos(String dados) {
+        this.dados = statusos;
+    }
+    public Date getDatacriacaoos() {
+        return this.datacriacaoos;
+    }
+    public void setDatacriacaoos(Date datacriacaoos) {
+        this.datacriacaoos = datacriacaoos;
+    }
+    public Date getDataatualizacaoos() {
+        return this.dataatualizacaoos;
+    }
+    public void setDataatualizacaoos(Date dataatualizacaoos) {
+        this.dataatualizacaoos = dataatualizacaoos;
+    }
+}

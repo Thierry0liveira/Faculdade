@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo JavaScript 2</title>
+    <script>
+        function mudar()
+        {
+           var cor = document.form1.cores.option.value;
+           document.bgColor = cor;
+        }
+    </script>
+</head>
+<body>
+    <form name="form1">
+        <select name="cores" onchange="mudar()">
+            <option value="white">Branco</option>
+            <option value="green">Verde</option>
+            <option value="blue">Azul</option>
+            <option value="yellow">Amarelo</option>
+            <option value="black">Preto</option>
+            <option value="gray">Cinza</option>
+            <option value="red">Vermelho</option>
+
+        </select>
+    </form>
+</body>
+</html>

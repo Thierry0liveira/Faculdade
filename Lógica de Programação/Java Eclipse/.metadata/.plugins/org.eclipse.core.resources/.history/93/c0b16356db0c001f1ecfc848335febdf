@@ -1,0 +1,90 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class Requisicao {
+	public int requisicaoID;
+	public OS ordemID;
+	public String descricaoreq;
+	public float quantidadereq;
+	public String statusreq;
+	public Date datacriacaoreq;
+	public Date dataatualizacaoreq;
+	public float precoreq;
+	
+	public int getRequisicaoID(){
+    return this.requisicaoID;
+    }
+
+    public void setRequisicaoID(int requisicaoID) {
+        this.requisicaoID = requisicaoID;
+    }
+
+    public OS getOrdemID() {
+        return this.ordemID;
+    }
+
+    public void setOrdemID(OS ordemID) {
+        this.ordemID = ordemID;
+    }
+
+    public String getDescricaoreq() {
+        return this.descricaoreq;
+    }
+
+    public void setDescricaoreq(String descricaoreq) {
+        this.descricaoreq = descricaoreq;
+    }
+
+    public float getQuantidadereq() {
+        return this.quantidadereq;
+    }
+
+    public void setQuantidadereq(float quantidadereq) {
+        this.quantidadereq = quantidadereq;
+    }
+
+    public String getStatusreq() {
+        return this.statusreq;
+    }
+
+    public void setStatusreq(String statusreq) {
+        this.statusreq = statusreq;
+    }
+
+    public Date getDatacriacaoreq() {
+        return this.datacriacaoreq;
+    }
+
+    public void setDatacriacaoos(Date datacriacaoos) {
+        this.datacriacaoos = datacriacaoos;
+    }
+
+    public Date getDataatualizacaoos() {
+        return this.dataatualizacaoos;
+    }
+
+    public void setDataatualizacaoos(Date dataatualizacaoos) {
+        this.dataatualizacaoos = dataatualizacaoos;
+    }
+
+    public float getCustoos() {
+        return this.custoos;
+    }
+
+    public void setCustoos(float custoos) {
+        this.custoos = custoos;
+    }
+    
+    protected int ConsultarOS() {
+		System.out.println("ID OS: " + this.getOrdemID());
+		System.out.println("ID Denúncia " + this.getDenunciaID());
+		System.out.println("Descrição: " + this.getDescricaoos());
+		System.out.println("Responsável: " + this.getResponsavelos());
+		System.out.println("Status: " + this.getStatusos());
+		System.out.println("Data de Criação: " + this.getDatacriacaoos());
+		System.out.println("Data Atualização " + this.getDataatualizacaoos());
+		System.out.println("Custo: " + this.getCustoos());
+		return 0;
+	}
+}

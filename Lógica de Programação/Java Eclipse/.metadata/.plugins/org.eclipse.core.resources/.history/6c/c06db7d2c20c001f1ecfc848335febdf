@@ -1,0 +1,26 @@
+package aula;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		// criando um objeto da classe Conta - Conta() é o método construtor		
+		Conta conta1 = new Conta();
+				
+		//atribuindo valores para as variáveis de instância			
+		conta1.setNumConta(123);
+		conta1.setCpf("123.456.789-00");
+		conta1.setSaldo(1500);
+				
+		//mostrando os dados				
+		conta1.ConsultaConta();
+				
+		//criando um segundo objeto				
+		Conta conta2 = new Conta(3214, "987.654.321/10", 10);
+		
+		conta2.ConsultaConta();
+		
+		//criando conta3
+		ContaEspecial conta3 = new ContaEspecial(9874, "951.753.852-00", -50,500);
+	}
+
+}

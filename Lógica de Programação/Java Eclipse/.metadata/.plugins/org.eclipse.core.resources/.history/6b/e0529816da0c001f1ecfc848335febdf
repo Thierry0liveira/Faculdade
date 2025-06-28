@@ -1,0 +1,13 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class Requisicao {
+	public int requisicaoID;
+	public OS ordemID;
+	public String descricao;
+	public float quantidade;
+	public String status;
+	private Date dataHora;	 
+		 
+}

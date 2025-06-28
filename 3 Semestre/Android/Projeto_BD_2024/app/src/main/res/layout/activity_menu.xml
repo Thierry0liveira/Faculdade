@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtMENUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Usuário: "
+        android:textSize="20dp"/>
+
+    <ImageButton
+        android:id="@+id/btMENCadastroProdutos"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/addproduto" />
+
+    <ImageButton
+        android:id="@+id/btMENMeusDados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/meusdados" />
+
+    <ImageButton
+        android:id="@+id/btMENConsultaProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/codigobarras" />
+
+    <ImageButton
+        android:id="@+id/btMENContatos"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/contatos" />
+    <ImageButton
+        android:id="@+id/btMENPedidos"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/pedidos" />
+
+    <ImageButton
+        android:id="@+id/btMENAgendamento"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/agendamento" />
+
+    <ImageButton
+        android:id="@+id/btMENConsultaAgendamento"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/consulta_agendamento" />
+</LinearLayout>

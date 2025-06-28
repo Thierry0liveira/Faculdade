@@ -1,0 +1,18 @@
+body{
+    background-color: green;
+}
+.classe1{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+.classe2{
+    background-color: aquamarine;
+    color: black;
+    font-size: 20px;
+}
+#id1{
+font: italic;
+font-size: 25px;
+background-color: pink;
+color: purple;}

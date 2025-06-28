@@ -1,0 +1,55 @@
+package aula;
+
+import javax.swing.*;
+import java.awt.*;
+public class Calculadora extends JFrame{
+	JLabel lblNum1, lblNum2;
+	JTextField txtNum1, txtNum2, txtRes;
+	JButton btSomar, btSubtrair, btMultiplicar, btDividir;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Calculadora calc = new Calculadora("Calculadora", new Dimension (300,300));
+		calc.setVisible(true);
+	}
+	
+	//metodo construtor
+	public Calculadora(String _titulo, Dimension _tamanho) {
+		setTitle(_titulo);
+		setSize(_tamanho);
+		getContentPane().setLayout(null);
+		getContentPane().setBackground(new Color(200,200,250));
+		
+		lblNum1 = new JLabel();
+		lblNum1.setText("Digite um Número: ");
+		lblNum1.setSize(150, 30);	//largura, altura => x, y
+		lblNum1.setLocation(30, 30);	//x, y
+		getContentPane().add(lblNum1);
+		
+		txtNum1 = new JTextField();
+		txtNum1.setText("");
+		txtNum1.setSize(150, 30);
+		txtNum1.setLocation(30, 60);
+		getContentPane().add(txtNum1);
+		
+		lblNum2 = new JLabel();
+		lblNum2.setText("Digite um Número: ");
+		lblNum2.setSize(150, 30);	//largura, altura => x, y
+		lblNum2.setLocation(30, 90);	//x, y
+		getContentPane().add(lblNum2);
+		
+		txtNum2 = new JTextField();
+		txtNum2.setText("");
+		txtNum2.setSize(150, 30);
+		txtNum2.setLocation(30, 120);
+		getContentPane().add(txtNum2);
+		
+		btSomar = new JButton();
+		btSomar.setText("Somar");
+		btSomar.setSize(100, 30);
+		btSomar.setLocation(250, 60);
+		getContentPane().add(btSomar);
+		
+	}
+
+}

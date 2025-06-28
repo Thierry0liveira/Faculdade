@@ -1,0 +1,10 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class Prefeito {
+	protected int prefeitoID;
+    public String nome;
+    protected String email;
+    protected String senha;
+}

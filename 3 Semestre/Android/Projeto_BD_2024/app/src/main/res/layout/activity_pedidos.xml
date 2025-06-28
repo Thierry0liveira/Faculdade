@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    android:orientation="vertical"
+    tools:context=".Pedidos">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PEDIDOS"
+        android:textSize="30dp"
+        android:gravity="center" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hamburger"/>
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:text="Hamburger R$ 20,00"/>
+
+        <Button
+            android:id="@+id/btMaisHamburger"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="17dp"
+            app:cornerRadius="30dp" />
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:id="@+id/lblQtdHamburger"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="17dp"
+            app:cornerRadius="30dp"
+            android:id="@+id/btMenosHamburger" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/refrigerante"/>
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:text="Refrigerante R$ 8,00"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="17dp"
+            app:cornerRadius="30dp"
+            android:id="@+id/btMaisRefrigerante" />
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:id="@+id/lblQtdRefrigerante"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="17dp"
+            app:cornerRadius="30dp"
+            android:id="@+id/btMenosRefrigerante" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/batata"/>
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:text="Batata R$ 10,00"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="17dp"
+            app:cornerRadius="30dp"
+            android:id="@+id/btMaisBatata" />
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:id="@+id/lblQtdBatata"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            app:cornerRadius="30dp"
+            android:textSize="17dp"
+            android:id="@+id/btMenosBatata" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:text="Total Geral:" />
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:text="R$ 0.00"
+            android:id="@+id/lblTotalPedido"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/btGravarPedido"
+        android:textSize="17dp"
+        app:cornerRadius="30dp"
+        android:text="GRAVAR PEDIDO" />
+</LinearLayout>

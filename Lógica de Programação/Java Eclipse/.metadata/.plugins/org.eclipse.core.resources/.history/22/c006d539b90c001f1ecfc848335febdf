@@ -1,0 +1,11 @@
+package aplicativo;
+
+public class Usuarios {
+	
+	public int user_ID;
+	public String nome;
+	public String email;
+	public String senha;
+	public String perfil;
+
+}

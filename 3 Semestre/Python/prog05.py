@@ -1,0 +1,5 @@
+nome=input('Digite o seu nome: ')
+idade=input('Digite sua idade: ')
+email=input('Digite seu e-mail: ')
+#print('Olá,',nome,'sua idade é',idade,'e seu email',email)
+print('Olá,{}, sua idade é {} e seu e-mail {}'.format(nome,idade,email))

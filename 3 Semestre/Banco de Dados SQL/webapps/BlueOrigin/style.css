@@ -1,0 +1,182 @@
+.container{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas:  "cabecalho" "conteudo" "rodape";
+    grid-template-rows: 15vh 70vh 15vh;
+    background-image: url(https://tm.ibxk.com.br/2018/08/23/23130311231085.jpg?ims=1200x675);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: arial;
+}
+.cabecalho{
+    grid-area: cabecalho;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    color: white;
+    font-family: arial;
+    font-size: 18px;
+}
+.conteudo{
+    grid-area: conteudo;
+    vertical-align: center;
+    color:white;
+}
+.rodape{
+    grid-area: rodape;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.rodape h2 a{
+    color: #008000;
+}
+.home{  
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color:rgb(0, 183, 255);
+    font-size: 30px;
+    font-family: Arial;
+    text-decoration: none;
+    border-color: blue;
+    background-color: transparent;
+    margin: 1px blue;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 183, 255);
+}
+#menususp{
+    grid-area: conteudo;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    color: rgb(0, 183, 255);
+}
+.coluna{
+    border: 1px solid rgb(0, 183, 255);
+    text-align: center;
+    vertical-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+#coluna1:hover{
+    background-image: url("https://bynder.virgingalactic.com/m/5957cc02e09b8f1b/webimage-U24_Pylon.png");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+}
+#coluna2:hover{
+    background-image: url("https://bynder.virgingalactic.com/m/2124a1d0cdbfb53f/webimage-Earthview_Sirisha-72p.png");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+}
+#coluna3:hover{
+    background-image: url("https://bynder.virgingalactic.com/m/5b3f740d4b9e0ba0/webimage-G02_Tailcone1.png");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+}
+#menu{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: rgb(0, 183, 255);
+    font-size: 30px;
+    font-family: cursive;
+    text-decoration: none;
+    margin-top:right;
+    background-color: transparent;
+    border-color: blue;
+    cursor: pointer;
+    
+}
+h1{
+    position: absolute; 
+    margin-left: 30px;
+    font-size: 100px;
+    color: rgb(0, 183, 255);
+    margin-top: 8%;
+    font-family: impact;
+}
+h2{
+color: rgb(0, 183, 255);
+margin-bottom: 5px;
+font-size: 30px;
+}
+#galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#galeria img{
+    max-width: 100%;
+    height: auto;
+    border: 1px solid white;
+    transition: transform 0.2s;
+    cursor:pointer;
+}
+#galeria img:hover{
+    transform: scale(1.1);
+}
+#textos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    font-size: 18px;
+    text-align: justify;
+    padding: 10px;
+    grid-gap: 20px;
+}
+span{
+    color: red;
+    font-size: 11px;
+}
+
+#esquerda{
+    border: 1px solid rgb(0, 183, 255);
+    margin-top: 2%;
+}
+.divs{
+    text-align: center;
+    vertical-align: center;
+    margin-top: 2%;
+    border: 1px solid rgb(0, 183, 255);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+td{
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+    border:1px solid rgb(0, 183, 255);
+    color: white;
+ }
+h3{
+     color: white;
+}
+form{
+    text-align: center;
+    font-family: arial,
+}
+input{
+    text-align: center;
+}
+button{
+    background-color: transparent;
+    border: 1px solid rgb(0, 183, 255);
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}

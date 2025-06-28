@@ -1,0 +1,65 @@
+<HTML lang="pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Ir ao Espaço 3</title>
+        <style>
+            #esquerda{
+                border: 1px solid rgb(0, 183, 255);
+                margin-top: 2%;
+            }
+            #direita{
+                text-align: center;
+                vertical-align: center;
+                margin-top: 2%;
+                border: 1px solid rgb(0, 183, 255);
+                justify-content: center;
+                align-items: center;
+                padding-top: 10%;
+                align-content: center;
+            }
+            form{
+                text-align: center;
+                font-family: arial,
+            }
+        </style>
+    </head>
+    <body >
+        <div class="container">
+            <div class="cabecalho">
+                <a href="PaginaInicial.html" class="home">Blue Origin </br> Para o benefício da Terra</a>
+                <h2>IR AO ESPAÇO</h2>
+                <p><strong>Tornando o Impossível em Inevitável</strong></p>
+                <a href="menu.html" id="menu">MENU</a>
+            </div>
+
+            <div class="conteudo">
+
+                <div id="textos">
+                    <div id="esquerda"> 
+                        <img src="https://img.nsctotal.com.br/wp-content/uploads/2022/10/planeta-terra-vista-do-espaco-1.jpg" alt="Terra vista espacial">
+                    </div>
+
+                    <div id="direita"> <h2>Inscreva-se</h2> </br> <p>Só mais alguns detalhes.</p></br></br>
+                        <form method="post" name="formulário2" action="grava.jsp">
+                            <input type="date" name="date">
+                        </br> </br> </br>
+                            <select name="Genero">
+                            <option value="" disabled selected> Gênero</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                            <option value="O">Outro</option>
+                            </select>
+                            </br> </br> </br>
+                            <input type="text" name="textnac" maxlength="35" placeholder="Nacionalidade">
+                            </br> </br> </br>
+                            <input type="submit" value="Confirmar">
+                        </form>
+                   </div>
+                </div>
+            </div>
+            <div class="rodape"></div>
+        </div>
+    </body>
+</html>

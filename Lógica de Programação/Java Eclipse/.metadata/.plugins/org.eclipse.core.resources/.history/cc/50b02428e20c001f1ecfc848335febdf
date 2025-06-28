@@ -1,0 +1,8 @@
+package aplicativo;
+
+public class Prefeito {
+	protected int prefeitoID;
+    public String nome;
+    protected String email;
+    protected String senha;
+}

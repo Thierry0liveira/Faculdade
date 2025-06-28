@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario 2 validação</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Cadastro</legend>
+        <form action="grava.jsp" name="form1">
+            <label for="txtNome">Nome:</label>
+            <input type="text" name="txtNome" id="txtnome">
+            <!--Span é um campo em branco para ser exibido a menssagem de erro-->
+            <span id="erroNome"></span>
+
+            <br>
+
+            <label for="txtIdade">Idade:</label>
+            <input type="text" name="txtIdade" id="txtidade">
+            <span id="erroIdade"></span>
+
+            <br>
+
+            <label for="txtEmail">Email:</label>
+            <input type="text" name="txtEmail" id="txtemail">
+            <span id="erroEmail"></span>
+        
+            <br>
+            <input type="submit" value="gravar" >
+        </form>
+    </fieldset>
+
+    
+</body>
+</html>

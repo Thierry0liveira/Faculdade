@@ -1,0 +1,13 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class AcaoDenuncias {
+	 public int acaoID;
+	 public int denunciaID;
+	 private int userID;
+	 private String acao;
+	 private String descricaoAcao;
+	 private Date dataHoraAcao;
+
+}

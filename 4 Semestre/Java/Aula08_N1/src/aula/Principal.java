@@ -1,0 +1,26 @@
+package aula;
+
+import javax.swing.JOptionPane;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		// criar as variáveis
+		String dadosDigitados, msg;
+		//criando o objeto da calsse ContaComum
+		ContaComum conta1 = new ContaComum();
+		
+		dadosDigitados = JOptionPane.showInputDialog("Digite o saldo da conta: R$");
+		conta1.setSaldo(Double.parseDouble(dadosDigitados));
+		
+		JOptionPane.showMessageDialog(null, "Saldo atual: " + conta1.getSaldo());
+		
+		dadosDigitados = JOptionPane.showInputDialog("Digite o valor a sacar: R$");
+		msg = conta1.saque(Double.parseDouble(dadosDigitados));
+		JOptionPane.showMessageDialog(null, msg);
+		
+		JOptionPane.showMessageDialog(null, "Saldo atual: R$" + conta1.getSaldo());
+
+	}
+
+}

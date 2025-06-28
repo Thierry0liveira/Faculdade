@@ -1,0 +1,18 @@
+package aula;
+
+public class ContaEspecial extends Conta {
+	public float limite;
+	
+	//método construtor
+	public ContaEspecial(int _num, String _cpf, float saldo, float limite) {
+		super(int _num, String _cpf, float saldo);
+		this.setLimite(limite);
+	}
+	
+	public void setLimite(float _lim) {
+		this.limite = _lim;
+	}
+	public float getLimite() {
+		return this.limite;
+	}
+}

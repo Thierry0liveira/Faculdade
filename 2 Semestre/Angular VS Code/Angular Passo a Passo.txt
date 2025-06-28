@@ -1,0 +1,49 @@
+Node.js
+ --> npm (Gerenciador de Pacotes)
+
+Instalar
+ --> npm 
+
+Angular
+ Versão
+ --> ng v
+
+Instalar
+ --> npm install -g @angular/cli
+
+Cria o Projeto
+ --> ng new NOME_PROJETO
+ --> npx ng new NOME_PROJETO
+
+Entra na pasta do Projeto
+ --> cd NOME_PROJETO
+
+Criar a pasta 'servicos' dentro da pasta 'src/app'
+
+Acessar a pasta 'servicos' 
+ -->cd src/app/servicos
+
+Criar um serviço
+ --> ng g s cep
+
+Abrir o VsCode na Pasta do Projeto
+ --> code .
+
+Compilar e Rodar o Projeto
+ --> ng serve
+
+Abrir o Navegador
+ --> o
+
+Acessar a Pasta Componentes
+ --> cd src
+ --> cd app
+ --. cd componentes
+
+Criar componente
+ --> ng generete componente NOME_COMPONENTE
+     ng g	 c	    NOME_COMPONENTE
+
+Adicionar Material
+ --> ng add @angular/material@17.3.6
+ --> y em todas as opções

@@ -1,0 +1,49 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class AcaoDenuncias {
+	 public int acaoID;
+	 public Denuncias denunciaID;
+	 public Usuarios userID;
+	 public String acao;
+	 public String descricaoacao;
+	 public Date dataacao;
+	 
+	 public int getAcaoID() {
+	        return acaoID;
+	    }
+	    public void setAcaoID(int acaoID) {
+	        this.acaoID = acaoID;
+	    }
+	    public Denuncias getDenunciaID() {
+	        return this.denunciaID;
+	    }
+	    public void setDenunciaID(Denuncias denunciaID) {
+	        this.denunciaID = denunciaID;
+	    }
+	    public Usuarios getUserID() {
+	        return this.userID;
+	    }
+	    public void setUserID(Usuarios userID) {
+	        this.userID = userID;
+	    }
+	    public String getAcao() {
+	        return this.acao;
+	    }
+	    public void setAcao(String acao) {
+	        this.acao = acao;
+	    }
+	    public String getDescricaoacao() {
+	        return this.descricaoacao;
+	    }
+	    public void setDescricaoAcao(String descricaoAcao) {
+	        this.descricaoAcao = descricaoAcao;
+	    }
+	    public Date getDataHoraAcao() {
+	        return dataHoraAcao;
+	    }
+	    public void setDataHoraAcao(Date dataHoraAcao) {
+	        this.dataHoraAcao = dataHoraAcao;
+	    }
+}

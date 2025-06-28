@@ -1,0 +1,88 @@
+<HTML lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Ir ao espaço</title>
+        <style>
+            #esquerda{
+                border: 1px solid rgb(0, 183, 255);
+            }
+            #direita{
+                text-align: center;
+                vertical-align: center;
+                border: 1px solid rgb(0, 183, 255);
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+            }
+            form{
+                text-align: center;
+                font-family: arial,
+            }
+            input{
+                text-align: center;
+            }
+        </style>       
+    </head>
+    <body >
+        <div class="container">
+            <div class="cabecalho">
+                <a href="PaginaInicial.html" class="home">Blue Origin </br> Para o benefício da Terra</a>
+                <h2>IR AO ESPAÇO</h2>
+                <p><strong>Tornando o Impossível em Inevitável</strong></p>
+                <a href="menu.html" id="menu">MENU</a>
+            </div>
+
+            <div class="conteudo">
+
+                <div id="textos">
+                    <div id="esquerda"> 
+                        <img src="https://img.nsctotal.com.br/wp-content/uploads/2022/10/planeta-terra-vista-do-espaco-1.jpg" alt="Terra vista espacial">
+                    </div>
+
+                    <div id="direita"> <h2>Inscreva-se</h2> </br> <p>Só mais alguns detalhes.</p>
+                        <form method="post" name="formulário3" action="grava.jsp">
+                            <input type="date" name="date">
+                            &nbsp;&nbsp;&nbsp;
+                            <select name="Genero">
+                            <option value="" disabled selected> Gênero</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                            <option value="O">Outro</option>
+                            </select>
+                            </br></br>
+                            <input type="text" name="textnac" maxlength="35" placeholder="Nacionalidade">
+                            &nbsp;&nbsp;&nbsp;
+                            <input type="text" name="tel" maxlength="35" placeholder="Telefone">
+                            </br></br>
+                            <input type="text"name="end" maxlength="30" placeholder="Endereço" style="width: 500px"></input>
+                            </br></br>
+                            Selecione os Assentos: </br>
+                            <input type="checkbox" name="cadeira1"value="ca1">assento 1</input>         &nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" name="cadeira2"value="ca2">assento 2</input>         &nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" name="cadeira3"value="ca3">assento 3</input>         &nbsp;&nbsp;&nbsp; </br>
+                            <input type="checkbox" name="cadeira4" value="ca4">assento 4</input>        &nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" name="cadeira5" value="ca5">assento 5</input>        &nbsp;&nbsp;&nbsp;
+                            <input type="checkbox" name="cadeira6" value="ca6">assento 6</input>        &nbsp;&nbsp;&nbsp;
+                            </br></br>
+                            Pagamento: </br>
+                            <input type="text" name="titular.txt" maxlength="30" placeholder="Nome do Titular" style="width: 500px">
+                            </br></br>
+                            <input type="text"  maxlength="14" name="cpfnumber" placeholder="CPF do Titular">
+                            </br></br>
+                            <input type="text" name="numcart.number" placeholder="Número do Cartão">
+                            &nbsp;&nbsp;&nbsp;
+                            <input type="text" name="venccart" placeholder="Vencimento" style="width: 100px"> 
+                            &nbsp;&nbsp;&nbsp;
+                            <input type="text"  maxlength="3" name="cvvcart" placeholder="CVV" style="width: 40px">
+                            </br></br>
+                            <input type="submit" value="Confirmar o Pagamento">
+                        </form>
+                   </div>
+                </div>
+            </div>
+            <div class="rodape"></div>
+        </div>           
+    </body>
+</html>

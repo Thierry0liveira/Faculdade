@@ -1,0 +1,22 @@
+#menu{
+    background-color: black;
+}
+
+#menu ul{
+    list-style: none;
+}
+
+#menu ul li {
+    display: inline;
+}
+
+#menu ul li a{
+    color:white;
+    text-decoration: none;
+    padding: 20px;
+    display:inline-block;
+}
+
+#menu ul li a:hover{
+ background-color: grey;
+}

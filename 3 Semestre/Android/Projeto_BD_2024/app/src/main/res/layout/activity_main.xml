@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/txtCodigo"
+        android:layout_width="268dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Codigo"
+        android:layout_alignBottom="@+id/Codigo"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_toRightOf="@+id/Codigo"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Codigo"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/Codigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="48dp"
+        android:padding="@dimen/padding_medium"
+        android:text="Código:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/Nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Codigo"
+        android:layout_alignLeft="@+id/Email"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:padding="@dimen/padding_medium"
+        android:text="Nome:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Codigo" />
+
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Codigo"
+        android:layout_alignRight="@+id/Codigo"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:padding="@dimen/padding_medium"
+        android:text="E-mail:"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nome" />
+
+    <EditText
+        android:id="@+id/txtNome"
+        android:layout_width="268dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtCodigo"
+        android:layout_alignTop="@+id/Nome"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="18dp"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Nome"
+        app:layout_constraintTop_toBottomOf="@+id/txtCodigo" />
+
+    <Button
+        android:id="@+id/btAlterar"
+        android:layout_width="153dp"
+        android:layout_height="46dp"
+        android:layout_alignBaseline="@+id/btConsultar"
+        android:layout_alignBottom="@+id/btConsultar"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="36dp"
+        android:layout_toRightOf="@+id/btConsultar"
+        android:text="Alterar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btSalvar" />
+
+    <Button
+        android:id="@+id/btConsultar"
+        android:layout_width="153dp"
+        android:layout_height="46dp"
+        android:layout_alignBaseline="@+id/btExcluir"
+        android:layout_alignLeft="@+id/txtEmail"
+        android:layout_alignBottom="@+id/btExcluir"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:text="Consultar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btSalvar"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+    <Button
+        android:id="@+id/btExcluir"
+        android:layout_width="153dp"
+        android:layout_height="46dp"
+        android:layout_below="@+id/txtEmail"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:text="Excluir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btAlterar"
+        app:layout_constraintTop_toBottomOf="@+id/btConsultar" />
+
+    <Button
+        android:id="@+id/btSalvar"
+        android:layout_width="153dp"
+        android:layout_height="46dp"
+        android:layout_alignBaseline="@+id/btConsultar"
+        android:layout_alignLeft="@+id/Email"
+        android:layout_alignBottom="@+id/btConsultar"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="52dp"
+        android:text="Salvar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Email" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="268dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtNome"
+        android:layout_alignTop="@+id/Email"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="17dp"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Email"
+        app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="36dp"
+        android:text="Contatos"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

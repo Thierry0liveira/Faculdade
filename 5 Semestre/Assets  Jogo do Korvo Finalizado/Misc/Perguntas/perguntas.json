@@ -1,0 +1,78 @@
+{
+  "basico": [
+    {
+      "frase": "What color is the sky on a clear day?",
+      "resposta": "Blue",
+      "alternativas": ["Green", "Blue", "Red", "Yellow"]
+    },
+    {
+      "frase": "She ___ a student.",
+      "resposta": "is",
+      "alternativas": ["are", "is", "am", "be"]
+    },
+    {
+      "frase": "Choose the correct plural: \"One apple, two ___.\"",
+      "resposta": "apples",
+      "alternativas": ["apple", "aples", "apples", "applas"]
+    }
+  ],
+  "intermediario": [
+    {
+      "frase": "What are you doing right now?",
+      "resposta": "I am reading a book.",
+      "alternativas": [
+        "I read a book.",
+        "I am reading a book.",
+        "I was reading a book.",
+        "I readed a book."
+      ]
+    },
+    {
+      "frase": "She didn’t go to the party because she ___ sick.",
+      "resposta": "was",
+      "alternativas": ["was", "is", "were", "are"]
+    },
+    {
+      "frase": "Which sentence is a question?",
+      "resposta": "Do you like pizza?",
+      "alternativas": [
+        "You like pizza.",
+        "Do you like pizza?",
+        "I like pizza?",
+        "Pizza you like?"
+      ]
+    }
+  ],
+  "avancado": [
+    {
+      "frase": "If she had studied harder, she ___ the exam.",
+      "resposta": "would have passed",
+      "alternativas": [
+        "would have passed",
+        "will pass",
+        "passed",
+        "was passing"
+      ]
+    },
+    {
+      "frase": "He said, \"I’m going to call her tomorrow.\" → Reported speech:",
+      "resposta": "He said he would call her the next day.",
+      "alternativas": [
+        "He said he goes to call her tomorrow.",
+        "He said he would call her the next day.",
+        "He said he will call her the next day.",
+        "He said he was calling her tomorrow."
+      ]
+    },
+    {
+      "frase": "Which sentence sounds the most natural and formal in English?",
+      "resposta": "I have no idea.",
+      "alternativas": [
+        "I ain't got no idea.",
+        "I don’t got any idea.",
+        "I haven’t any idea.",
+        "I have no idea."
+      ]
+    }
+  ]
+}

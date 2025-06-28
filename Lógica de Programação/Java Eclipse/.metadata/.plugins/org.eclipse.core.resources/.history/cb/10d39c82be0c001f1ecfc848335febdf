@@ -1,0 +1,54 @@
+package aula;
+
+public class Conta {
+	
+	public int numConta;
+	public String cpf;
+	public float saldo;
+	
+	//criando o metodo construtor
+	public Conta(int numConta, String cpf, float saldo) {
+		this.setNumConta(numConta);
+		this.setCpf(cpf);
+		this.setSaldo(saldo);
+	}
+	public Conta() {
+		this.setNumConta(0);
+		this.setCpf("");
+		this.setSaldo(0);
+	}
+
+	
+	
+	
+	public void setNumConta(int _num) {
+		this.numConta = _num;
+	}
+	
+	public int getNumConta() {
+		return this.numConta;
+	}
+	
+	public void setCpf(String _cpf) {
+		this.cpf = _cpf;
+	}
+	public String getCpf() {
+		return this.cpf;
+	}
+	public void setSaldo(float _saldo) {
+		this.saldo = _saldo;
+	}
+	public float getSaldo() {
+		return this.saldo;
+	}
+	
+	public void ConsultaConta() {
+		System.out.println("Número da Conta: " + this.getNumConta());
+		System.out.println("CPF: " + this.getCpf());
+		System.out.println("Saldo: " + this.getSaldo());
+	}
+	
+	
+
+
+}

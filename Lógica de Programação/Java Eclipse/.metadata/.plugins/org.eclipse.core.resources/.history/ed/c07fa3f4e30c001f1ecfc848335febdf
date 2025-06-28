@@ -1,0 +1,43 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class Orcamento {
+	public int orcamentoID;
+    protected Prefeito prefeitoID;
+    public String tipoorcamento;
+    public String avaliacao;
+    public Date dataavaliacao;
+    
+    public int getOrcamentoID() {
+        return orcamentoID;
+    }
+
+    public void setOrcamentoID(int orcamentoID) {
+        this.orcamentoID = orcamentoID;
+    }
+
+    public int getPrefeitoID() {
+        return prefeitoID;
+    }
+
+    public void setPrefeitoID(int prefeitoID) {
+        this.prefeitoID = prefeitoID;
+    }
+
+    public float getValor() {
+        return valor;
+    }
+
+    public void setValor(float valor) {
+        this.valor = valor;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+}

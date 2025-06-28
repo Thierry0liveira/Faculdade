@@ -1,0 +1,46 @@
+package aplicativo;
+
+public class Secretarios {
+	protected int secretarioID;
+    public String nomesec;
+    protected String email;
+    public String secretaria;
+    
+    public int getSecretarioID() {
+        return this.secretarioID;
+    }
+
+    public void setSecretarioID(int secretarioID) {
+        this.secretarioID = secretarioID;
+    }
+
+    public String getNomesec() {
+        return this.nomesec;
+    }
+
+    public void setNomesec(String nomesec) {
+        this.nomesec = nomesec;
+    }
+    
+    public String getEmail() {
+    	return this.email;
+    }
+    
+    public void setEmail(String email) {
+    	this.email = email;
+    }
+
+    public String getSecretaria() {
+        return secretaria;
+    }
+
+    public void setSecretaria(String secretaria) {
+        this.secretaria = secretaria;
+    }
+    
+    protected int ConsultarSecretarios() {
+		System.out.println("ID Secretário: " + this.getSecretarioID());
+		System.out.println("ID Nome do Secretário: " + this.getNomesec());
+		System.out.println("Email: " + this.getEmail());
+		System.out.println("Responsável: " + this.getSecretaria());
+}

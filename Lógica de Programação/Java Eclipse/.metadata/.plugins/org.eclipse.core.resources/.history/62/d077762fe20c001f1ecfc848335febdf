@@ -1,0 +1,40 @@
+package aplicativo;
+
+public class Prefeito {
+	protected int prefeitoID;
+    public String nome;
+    protected String email;
+    protected String senha;
+    
+    public int getPrefeitoID() {
+        return this.prefeitoID;
+    }
+
+    public void setPrefeitoID(int secretarioID) {
+        this.prefeitoID = secretarioID;
+    }
+
+    public String getNomesec() {
+        return this.nomesec;
+    }
+
+    public void setNomesec(String nomesec) {
+        this.nomesec = nomesec;
+    }
+    
+    public String getEmail() {
+    	return this.email;
+    }
+    
+    public void setEmail(String email) {
+    	this.email = email;
+    }
+
+    public String getSecretaria() {
+        return secretaria;
+    }
+
+    public void setSecretaria(String secretaria) {
+        this.secretaria = secretaria;
+    }
+}

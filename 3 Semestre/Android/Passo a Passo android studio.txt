@@ -1,0 +1,16 @@
+Pastas
+
+manifests -> Arquivo AndroidManifest.xml (Arquivo de configuração) é nesse arquivo que você relata tudo o que você vai 
+usar exemplo GPS, CAMERA, quantas interfaces gráficas o APP tem, etc.
+
+Java ->  Programas em Java (programar as ações do aplicativo)
+
+res
+   drawable -> imagens / figuras
+   layout -> armazenar as interfaces gráficas do aplicativo (Arquivos em xml da aplicação)
+   mipmap -> icones
+   values -> para definir valores para ser reutilizados sepados em cor (colors), texto (strings) temas
+   xml -> arquivo de backup
+
+
+Do lado direito em Device Manager é o gerenciador de máquinas virtual tendo a virtualização e o físico com oc elular conectado ao PC.

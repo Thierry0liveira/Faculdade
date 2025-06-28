@@ -1,0 +1,37 @@
+package aula;
+
+public class Conta {
+	
+	public int numConta;
+	public String cpf;
+	public float saldo;
+	
+	public void setNumConta(int _num) {
+		this.numConta = _num;
+	}
+	
+	public int getNumConta() {
+		return this.numConta;
+	}
+	
+	public void setCpf(String _cpf) {
+		this.cpf = _cpf;
+	}
+	public String getCpf() {
+		return this.cpf;
+	}
+	public void setSaldo(float _saldo) {
+		this.saldo = _saldo;
+	}
+	public float getSaldo() {
+		return this.saldo;
+	}
+	
+	public void ConsultaConta() {
+		System.out.println("Número da Conta: " + this.getNumConta());
+	}
+	
+	
+
+
+}

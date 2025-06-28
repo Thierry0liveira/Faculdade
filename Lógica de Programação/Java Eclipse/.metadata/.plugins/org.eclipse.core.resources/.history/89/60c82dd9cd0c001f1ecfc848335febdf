@@ -1,0 +1,14 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class OS {
+	private int ordemID;
+    private int denunciaID;
+    private String descricaoos;
+    private String reponsavelos;
+    private String statusos;
+    private Date datacriacaoos;
+    private Date dataatualizacaoos;
+
+}

@@ -1,0 +1,8 @@
+PROPRIEDADES
+
+android:id="@+id/frameLayout1"		---->	identificação
+android:layout_width="fill_parent"	---->	largura
+android:layout_height="fill_parent"	---->	altura
+
+TextView  ->  objeto visual para mostrar
+Button	  ->  

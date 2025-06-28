@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo JavaScript 1</title>
+    <style>
+        #caixa{
+            border: 1px solid black;
+        }
+        #caixa div{
+            padding: 5px;
+        }
+        #titulo{
+            background-color: lightgrey;
+        }
+        a{
+        text-decoration: none;
+        color: red;
+        }
+        a:hover{
+        text-decoration: underline;
+        color: brown;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="caixa">
+        <div id="titulo">
+            JavaScript 
+            <a href="#" onclick="exibir()">
+                Saiba Mais
+            </a>
+        </div>
+        <div id="texto">
+            JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma. 
+            Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web.
+        </div>
+    </div>
+    <script>
+        document.getElementById("texto").style.display = "none";
+
+        function exibir(){
+            if(document.getElementById("texto").style.display =="block"){
+                document.getElementById("texto").style.display = "none";
+            }else{
+                document.getElementById("texto").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

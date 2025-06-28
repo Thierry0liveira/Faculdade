@@ -1,0 +1,15 @@
+package aplicativo;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		// criando um objeto da classe Conta
+		Conta conta1 = new Conta();
+		
+		//atribuindo valores para as variáveis de instância
+		
+		
+
+	}
+
+}

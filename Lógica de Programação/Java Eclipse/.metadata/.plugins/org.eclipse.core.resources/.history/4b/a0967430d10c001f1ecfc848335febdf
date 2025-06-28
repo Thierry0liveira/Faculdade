@@ -1,0 +1,47 @@
+package aplicativo;
+
+public class Usuarios {
+	
+	private int userID;
+	public String nome;
+	private String email;
+	private String senha;
+	private String perfil;
+	
+	//Gets e Sets
+	public int getUserID() {
+		return this.userID;
+	}
+	public void setUser_ID(int _id) {
+		this.userID = _id;
+	}
+	
+	public String getNome() {
+		return this.nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getEmail() {
+		return this.email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getSenha() {
+		return this.senha;
+	}
+	public void setSenha(String Senha) {
+		this.senha = Senha;
+	}
+	public String getPerfil() {
+		return this.perfil;
+	}
+	public void setPerfil(String Perfil) {
+		this.perfil = Perfil;
+	}
+	
+	private int Consultar() {
+		
+	}
+}

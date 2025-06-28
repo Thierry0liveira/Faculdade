@@ -1,0 +1,17 @@
+E:\VisualStudio Projetos\Assunto 4 N1\bin\Debug\net9.0-windows\Assunto 4 N1.exe
+E:\VisualStudio Projetos\Assunto 4 N1\bin\Debug\net9.0-windows\Assunto 4 N1.deps.json
+E:\VisualStudio Projetos\Assunto 4 N1\bin\Debug\net9.0-windows\Assunto 4 N1.runtimeconfig.json
+E:\VisualStudio Projetos\Assunto 4 N1\bin\Debug\net9.0-windows\Assunto 4 N1.dll
+E:\VisualStudio Projetos\Assunto 4 N1\bin\Debug\net9.0-windows\Assunto 4 N1.pdb
+E:\VisualStudio Projetos\Assunto 4 N1\obj\Debug\net9.0-windows\Assunto_4_N1.Form1.resources
+E:\VisualStudio Projetos\Assunto 4 N1\obj\Debug\net9.0-windows\Assunto_4_N1.Properties.Resources.resources
+E:\VisualStudio Projetos\Assunto 4 N1\obj\Debug\net9.0-windows\Assunto 4 N1.csproj.GenerateResource.cache
+E:\VisualStudio Projetos\Assunto 4 N1\obj\Debug\net9.0-windows\Assunto 4 N1.GeneratedMSBuildEditorConfig.editorconfig
+E:\VisualStudio Projetos\Assunto 4 N1\obj\Debug\net9.0-windows\Assunto 4 N1.AssemblyInfoInputs.cache
+E:\VisualStudio Projetos\Assunto 4 N1\obj\Debug\net9.0-windows\Assunto 4 N1.AssemblyInfo.cs
+E:\VisualStudio Projetos\Assunto 4 N1\obj\Debug\net9.0-windows\Assunto 4 N1.csproj.CoreCompileInputs.cache
+E:\VisualStudio Projetos\Assunto 4 N1\obj\Debug\net9.0-windows\Assunto 4 N1.dll
+E:\VisualStudio Projetos\Assunto 4 N1\obj\Debug\net9.0-windows\refint\Assunto 4 N1.dll
+E:\VisualStudio Projetos\Assunto 4 N1\obj\Debug\net9.0-windows\Assunto 4 N1.pdb
+E:\VisualStudio Projetos\Assunto 4 N1\obj\Debug\net9.0-windows\Assunto 4 N1.genruntimeconfig.cache
+E:\VisualStudio Projetos\Assunto 4 N1\obj\Debug\net9.0-windows\ref\Assunto 4 N1.dll

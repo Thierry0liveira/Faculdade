@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario validação</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Cadastro</legend>
+        <form action="grava.jsp" name="form1">
+            <label for="txtNome">Nome:</label>
+            <input type="text" name="txtNome" id="txtNome">
+            <!--Span é um campo em branco para ser exibido a menssagem de erro-->
+            <span id="erroNome"></span>
+
+            <br>
+
+            <label for="txtIdade">Idade:</label>
+            <input type="text" name="txtIdade" id="txtIdade">
+            <span id="erroIdade"></span>
+
+            <br>
+
+            <label for="txtEmail">Email:</label>
+            <input type="text" name="txtEmail" id="txtEmail">
+            <span id="erroEmail"></span>
+        
+            <br>
+            <input type="button" value="salvar" onclick="verificar()">
+        </form>
+    </fieldset>
+
+    <script>
+        //Deixar o campo branco quando tiver correto
+        function limpar(){
+            document.getElementById("txtNome").style.backgroundColor = "white";
+            document.getElementById("txtIdade").style.backgroundColor = "white";
+            document.getElementById("txtEmail").style.backgroundColor = "white";
+            document.querySelector("#erroNome").textContent = "";
+            document.querySelector("#erroIdade").textContent = "";
+            document.querySelector("#erroEmail").textContent = "";
+        }
+        //Primeiro verifica-se se todos os campos estão preenchidos
+        function verificar(){
+            limpar();
+            var enviar = true;
+
+            var nome = document.getElementById("txtNome").value;
+            // alert(nome); Exibe na tela o nome em um pop-up mas não precisa nesse caso
+            if( nome.length == 0 ){
+                enviar = false;
+
+                  document.getElementById("txtNome").style.backgroundColor = "yellow";
+                  //queryselector encontra itens variados não so pelo id um buscador geral o textcontent é para inserir o texto de erro
+                  document.querySelector("#erroNome").textContent = "Preencha o campo nome";
+            }
+
+            var idade = document
+            .getElementById("txtIdade").value;
+            // && é o mesmo que AND e isNAN(idade) significa NotaNumber valida se o campo é um numero ||(Alt + 124) é o memso que OR
+            if( idade.length == 0  || isNaN(idade) ){
+                enviar = false;
+                document.getElementById("txtIdade").style.backgroundColor = "yellow";
+                document.querySelector("#erroIdade").textContent = "Preencha o campo idade";  
+            }
+
+            var email = document
+            .getElementById("txtEmail").value;
+            // indexOf reotrna a posição exata do que se quer encontrar e caso não encontre sempre retornará -1 começa a contar do 0
+            if(email.indexOf("@") < 0  ){
+                enviar = false;
+                document.getElementById("txtEmail").style.backgroundColor = "yellow";
+                document.querySelector("#erroEmail").textContent = "Preencha o campo email";
+            }
+
+            if(enviar){
+               document.form1.submit(); 
+            }
+
+ 
+        }
+
+
+    </script>
+</body>
+</html>

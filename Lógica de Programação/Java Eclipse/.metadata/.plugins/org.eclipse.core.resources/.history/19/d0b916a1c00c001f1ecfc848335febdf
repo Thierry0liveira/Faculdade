@@ -1,0 +1,13 @@
+package aula;
+
+public class ContaEspecial extends Conta {
+	public float limite;
+	
+	public void setLimite(int _lim) {
+		this.limite = _lim;
+	}
+	public float getLimite() {
+		return this.limite;
+	}
+
+}

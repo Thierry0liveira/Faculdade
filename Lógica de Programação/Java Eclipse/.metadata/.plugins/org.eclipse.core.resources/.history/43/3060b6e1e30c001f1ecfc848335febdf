@@ -1,0 +1,13 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class Orcamento {
+	public int orcamentoID;
+    protected Prefeito prefeitoID;
+    public String tipoorcamento;
+    public String avaliacao;
+    public Date dataavaliacao;
+    
+    
+}

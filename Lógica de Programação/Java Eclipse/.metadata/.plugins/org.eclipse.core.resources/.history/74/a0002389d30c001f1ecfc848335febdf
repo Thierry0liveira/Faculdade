@@ -1,0 +1,84 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class Denuncias {
+	private int denunciaID;
+    private int userID;
+    public String descricaodenuncias;
+    public String tipoproblema;
+    private String status;
+    private Date datachamado;
+    private Date dataatualizacao;
+    private float custoOS;
+    
+    public int getDenunciaID() {
+        return denunciaID;
+    }
+    public void setDenunciaID(int denunciaID) {
+        this.denunciaID = denunciaID;
+    }
+    public int getUserID() {
+        return this.userID;
+    }
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
+    public String getDescricao() {
+        return this.descricaodenuncias;
+    }
+    public void setDescricao(String descricaodenuncias) {
+        this.descricaodenuncias = descricaodenuncias;
+    }
+
+    public String getTipoproblema() {
+        return this.tipoproblema;
+    }
+
+    public void setTipoproblema(String tipoproblema) {
+        this.tipoproblema = tipoproblema;
+    }
+    
+    public String getStatus() {
+        return this.status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Date getDatachamado() {
+        return this.datachamado;
+    }
+
+    public void setDatachamado(Date datachamado) {
+        this.datachamado = datachamado;
+    }
+    
+    public Date getDataatualizacao() {
+        return this.dataatualizacao;
+    }
+
+    public void setDataHora(Date dataatualizacao) {
+        this.dataatualizacao = dataatualizacao;
+    }
+    
+    public float getCustoOS() {
+        return this.custoOS;
+    }
+
+    public void setCustoOS(float custoOS) {
+        this.custoOS = custoOS;
+    }
+    protected int ConsultarDenuncias() {
+		System.out.println("ID Denúncia: " + this.getDenunciaID());
+		System.out.println("ID Denúncia " + this.getDenunciaID());
+		System.out.println("Descrição: " + this.getDescricaoos());
+		System.out.println("Responsável: " + this.getResponsavelos());
+		System.out.println("Status: " + this.getStatusos());
+		System.out.println("Data de Criação: " + this.getDatacriacaoos());
+		System.out.println("Data Atualização " + this.getDataatualizacaoos());
+		System.out.println("Custo: " + this.getCustoos());
+		return 0;
+	}
+}

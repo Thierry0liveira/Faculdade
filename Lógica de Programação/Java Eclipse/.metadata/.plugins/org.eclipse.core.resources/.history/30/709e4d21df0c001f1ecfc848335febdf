@@ -1,0 +1,9 @@
+package aplicativo;
+
+public class Secretarios {
+	private int secretarioID;
+    private String nome;
+    private String email;
+    private String secretaria;
+
+}

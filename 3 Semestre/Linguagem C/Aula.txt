@@ -1,0 +1,43 @@
+LINGUAGEM C - IDE - Ambiente de Desenvolvimento C - DEV C++
+
+#include <stdio.h>
+
+//pode-se ter ou não o int com o return em alguns livros.
+int main(){
+	comandos
+	comandos
+	return 0;
+}
+
+COMANDOS
+
+printf - escreva na tela.
+	printf("AULA 3\n\n");
+scanf - permite q o usuário digite.
+	scanf(TIPO , &variavel);
+//o & (e comercial) significa para o sistema reservar um
+espaço na memória para guardar o que será digitado pelo usuario.
+
+
+	
+
+
+VARIAVEIS
+
+int numeros inteiros
+char letras
+float numeros decimais
+void
+
+CÓDIGO DE FORMATAÇÃO
+
+%d - valor decimal
+%i - numeros inteiros
+%d - caractere
+%o - octal
+%f - para float
+
+
+
+
+

@@ -1,0 +1,9 @@
+package aula;
+
+public class Conta {
+	
+	public int numConta;
+	public String cpf;
+	public float saldo;
+
+}

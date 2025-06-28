@@ -1,0 +1,12 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class VotosDenuncias {
+	private int votoID;
+    private int userID;
+    private int denunciaID;
+    private String voto;
+    private Date datavoto;
+
+}

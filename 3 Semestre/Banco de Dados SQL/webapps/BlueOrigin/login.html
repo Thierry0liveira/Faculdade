@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        fieldset{
+            vertical-align: center;
+            align-items: center;
+            justify-content: center;
+            padding-top: 10vh;
+            padding-bottom: 10vh;
+            position: flex;
+            border-color: rgb(0, 183, 255);
+        }
+        input{
+            background-color: transparent;
+            border: 1px solid rgb(0, 183, 255);
+            color:white;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="cabecalho"> 
+            <a href="PaginaInicial.html" class="home">Blue Origin </br> Para o benefício da Terra</a>
+            <a href="menu.html" id="menu">MENU</a>
+        </div>
+        <div class="conteudo">
+            <br><br><br><br><br>
+            <fieldset>
+                <legend>Login</legend>
+                <form name="form1" method="post" action="verificarlogin.jsp">
+                    Email:
+                    <input type="text" name="txtEmail" >
+
+                    <br><br><br><br>
+        
+                    Senha:
+                    <input type="password" name="txtSenha">
+                    
+                    <br><br><br><br>
+        
+                    <input type="submit" value="Logar">
+                </form>
+            </fieldset>        
+        </div>
+        <div class="rodape"></div>
+    </div>     
+</body>
+</html>

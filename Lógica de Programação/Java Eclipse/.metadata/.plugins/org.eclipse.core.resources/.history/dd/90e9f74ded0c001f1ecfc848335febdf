@@ -1,0 +1,51 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class VotosDenuncias {
+	private int votoID;
+    private Usuarios userID;
+    private Denuncias denunciaID;
+    private String voto;
+    private Date datavoto;
+    
+    public int getVotoID() {
+        return votoID;
+    }
+
+    public void setVotoID(int votoID) {
+        this.votoID = votoID;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
+
+    public int getDenunciaID() {
+        return denunciaID;
+    }
+
+    public void setDenunciaID(int denunciaID) {
+        this.denunciaID = denunciaID;
+    }
+
+    public String getVoto() {
+        return voto;
+    }
+
+    public void setVoto(String voto) {
+        this.voto = voto;
+    }
+
+    public Date getDatavoto() {
+        return datavoto;
+    }
+
+    public void setDataHoraVoto(Date datavoto) {
+        this.datavoto = datavoto;
+    }
+}

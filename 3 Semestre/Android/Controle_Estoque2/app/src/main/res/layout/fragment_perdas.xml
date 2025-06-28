@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.perdas.PerdasFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp">
+
+        <EditText
+            android:id="@+id/etxtDataPerdas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:hint="Data"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:background="@color/gray"
+            android:inputType="date"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/etxtHoraPerdas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Hora"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:background="@color/gray"
+            android:inputType="time"
+            android:textColorHint="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp">
+
+        <EditText
+            android:id="@+id/etxtCodBarrasPerdas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:hint="Código de Barras"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:background="@color/gray"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/etxtQuantPerdas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Quantidade"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:background="@color/gray"
+            android:textColorHint="@color/black" />
+    </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            android:text="ADICIONAR PRODUTO"
+            android:id="@+id/btAddProdPerdas"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <ListView
+                android:id="@+id/listaPerdas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etxtTotalPerdas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:hint="Valor Total"
+            android:background="@color/gray"
+            android:textColorHint="@color/black"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:text="Enviar Perdas"
+            android:id="@+id/btEnviarPerdas"/>
+    </LinearLayout>

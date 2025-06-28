@@ -1,0 +1,12 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class Prefeito {
+	protected int prefeitoID;
+	protected int avaliacaoID;
+    protected String nome;
+    protected String tipoorcamento;
+    protected String avaliacao;
+    protected Date dataavaliacao;
+}

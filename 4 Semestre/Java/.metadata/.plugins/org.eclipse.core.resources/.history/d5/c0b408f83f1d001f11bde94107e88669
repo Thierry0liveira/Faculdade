@@ -1,0 +1,34 @@
+package aula;
+
+public class ContaEspecial extends ContaComum {
+	public double limite;
+	
+	//gets e sets
+	public void setLimite(double _limite) {
+		this.limite = _limite;
+	}
+	public double getLimite() {
+		return this.limite;
+	}
+	
+	//método construtor
+	public ContaEspecial() {
+		super();				//chamando o método construtor da outra classe
+		this.setLimite(0);
+	}
+	
+	//criando o método saque (poliformismo)
+	
+	@Override
+	public String saque(double _valor) {
+		double saldoAtual = this.getSaldo() + this.getLimite() - _valor;
+		if (saldoAtual >= 0) {
+			this.setSaldo(this.getSaldo() - _valor);
+			return "Saque efetuado com Sucesso! \n Saldo Atual: R$" + this.getSaldo();
+		}else{
+			return "Saldo insuficiente para este saque!";
+		}
+	}
+	
+
+}

@@ -1,0 +1,21 @@
+package aula;
+
+public class Conta {
+	
+	public int numConta;
+	public String cpf;
+	public float saldo;
+	
+	public void setNumConta(int _num) {
+		this.numConta = _num;
+	}
+	
+	public int getNumConta() {
+		return this.numConta;
+	}
+	
+	
+	
+
+
+}

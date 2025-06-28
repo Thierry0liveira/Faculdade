@@ -1,0 +1,52 @@
+package aplicativo;
+
+public class Denuncias {
+	private int denunciaID;
+    private int userID;
+    private String descricao;
+    private String tipoproblema;
+    private String status;
+    private Date datachamado;
+    private Date dataatualização;
+    private float custoordem;
+    
+    public int getDenunciaID() {
+        return denunciaID;
+    }
+
+    public void setDenunciaID(int denunciaID) {
+        this.denunciaID = denunciaID;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public Date getDataHora() {
+        return dataHora;
+    }
+
+    public void setDataHora(Date dataHora) {
+        this.dataHora = dataHora;
+    }
+}

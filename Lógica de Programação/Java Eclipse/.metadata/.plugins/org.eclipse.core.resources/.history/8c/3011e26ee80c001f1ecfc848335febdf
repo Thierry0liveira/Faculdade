@@ -1,0 +1,30 @@
+package aplicativo;
+
+import java.util.Date;
+
+public class Dashboards {
+	protected int dashboardID;
+	public Denuncias denunciaID;
+    protected int secretarioID;
+    protected int prefeitoID;
+    public int ordemID;
+    public String tipodashboard;
+    public String dados;
+    private Date datacriacao;
+    private Date dataatualizacao;
+    
+    public int getDashboardID() {
+        return this.dashboardID;
+    }
+    public void setDashboard(int dashboardID) {
+        this.dashboardID = dashboardID;
+    }
+    
+    public Denuncias getDenunciaID() {
+        return this.denunciaID;
+    }
+    public void setDenunciaID(int dashboardID) {
+        this.dashboardID = dashboardID;
+    }
+
+}

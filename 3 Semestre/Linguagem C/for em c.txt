@@ -1,0 +1,12 @@
+for (inicio; condição; incremento){
+}
+
+exemplo
+
+for (int cont=1; cont <=10; cont++){
+	comandos...;
+	comandos...;
+	comandos...;
+}
+
+DEBUGAR um código é seguir pásso-a-passo

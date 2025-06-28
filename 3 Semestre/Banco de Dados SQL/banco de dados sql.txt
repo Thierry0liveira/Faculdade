@@ -1,0 +1,143 @@
+Banco de Dados Relacional
+
+SQL (Linguagem de Consulta Estruturada)
+ 
+	-->DDL (Create / Alter / Drop)
+	-->DML (insert / update / Delete / Select)
+	-->DCL (Grant / Revoke)
+	-->DTL (commit / rollback)
+
+			DDL
+	
+	#COMANDO PARA CRIAR UM BANCO OU UMA TABELA:
+	create database aula_bd_noite1B ;
+
+	create table alunos (
+		ra		int primary key auto_increment,
+		nome		varchar(50) not null,
+		email		varchar(50) not null,
+		CEP		char(9) ,
+		dataNasc	date,
+		idCurso		int,
+		foreign key	(idcurso) references cursos (idCurso)
+	);
+
+	create table cursos (
+		idCurso		int ,
+		nome		varchar(50) ,
+		cargahoraria	int
+	);
+
+	#COMANDO PARA APAGAR UM BANCO OU UMA TABELA:
+	drop database aula_bd_noite1B;
+	drop table alunos;
+	
+	#CHAVE PRIMÁRIA (primary key) e CAMPO OBRIGATÓRIO (not null):
+	create table cursos (
+		idCurso		int primary key auto_increment,
+		nome		varchar(50) not null,
+		cargahoraria	int not null
+
+	#COMANDO PARA INSERIR DADOS NMA TABELA
+	insert into <tabela>(lista de colunas) values (lista de valores)
+	
+	insert into cursos (nome, cargahoraria) values ('ADS',2500);
+	
+	#COMANDO PARA ALTERAR DADOS NA TABELA
+	update <tabela> set campo=<novo_valor, ... campo=<novo_valor>
+	[where <condição>];
+	a clausula where é opcional
+
+	update cursos set nome='Análise e Desenvolvimento de Sistemas';
+	
+	#COMANDO PARA DELETAR DADOS NA TABELA
+	delete from <tabela> [where <condição>]
+	a clausula where é opcional
+
+	delete from cursos where idCurso=1;
+
+	ou pra deletar tudo
+	delete from cursos;
+	
+	#ALTERAR NOME DO CURSO DE ADS PAR AANÁLISE E DESENVOLVIMENTO DE SISTEMAS
+	update cursos set nome='Análise e Desenvolvimento de Sistemas'
+	where idCurso=5;
+
+	#FOREIGN KEY (CHAVE ESTRANGEIRA)
+
+	# REFERENCES (APONTA A TABELA DE ORIGEM ENTRE () A COLUNA DA CHAVE PRIMÁRIA)
+
+	#COMANDO INSERIR DADOS NA TABELA ALUNOS
+	insert into alunos (nome, email, datanasc, cep, idcurso)
+	values ('Amanda','amanda@eniac.edu.br','2000-12-25','07001-003', 5)
+
+	#Alterar a estutura da tabela para adicionar outro campo
+	Alter table alunos
+	add column telefone varchar(10);
+	
+	#Alterando o tamanho
+	alter table alunos
+	modify column telefone varchar(20);
+	
+	#Alterando a tabela alunos para deletar uma coluna (todos os dados serão excluídos)
+	alter table alunos
+	drop column telefone
+
+--------------------------------------------------------------------------------------------
+				DML
+	
+SELECT (CONSULTAR)
+
+	select coluna(as)
+	FROM tabela(as)
+	[where <condição>
+	group by <coluna(as)>
+	order by <coluna(as)>
+	]
+
+	select nome, cargahoraria, idCurso
+	from cursos
+
+	#O símbolo * corresponde a todas as colunas da tabelas select* from cursos
+-------------------------------------------------------------------------------------------------
+	#Consultar todos os dados da tabela de cursos porem adicionando apelido
+	select idCurso, nome "Nome do Curso", cargahoraria "Carga Horaria"
+	from cursos
+----------------------------------------------------------------------------------------------------
+	#consultar todos os dados da tabela de cursos porem somente com carga horaria maior q 3000
+	select idCurso, nome, cargahoraria
+	from cursos
+	where cargahoraria > 3000;
+--------------------------------------------------------------------------------------------------
+	#Consultar todos os campos da tabela cursos porém apenas quando curso tiver codigo = 5
+	select*
+	from cursos
+	where idCurso = 5
+--------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+	#Consultar todos os campos da tabela cursos porém apenas quando codigo for 1 ou 3
+	select*
+	from cursos
+	where idCurso = 1 or idCurso = 3;
+--------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+	#Consultar todos os campos da tabela cursos ordenado por nome de curso
+	select*						select*
+	from cursos		ou decrescente		from cursos
+	order by nome;					order by nome desc;
+--------------------------------------------------------------------------------------------------
+	#Consultar todos os campos da tabela cursos porém apenas quando codigo entre 3 e 10
+	select*						select*								
+	from cursos				ou	from cursos
+	where idCurso >= 3 and idCurso <= 10;		where idCurso between 3 and 10;
+--------------------------------------------------------------------------------------------------
+	#Consultar todos os campos da tabela cursos que começam com a letra A
+	select*	from cursos
+	where nome like "A%";
+--------------------------------------------------------------------------------------------------
+	
+--------------------------------------------------------------------------------------------------	
+	#Consultar dados de duas tabelas
+	select alunos.ra, alunos.nome, alunos.idCurso, cursos.nome
+	from alunos, cursos
+	where alunos.idCurso = cursos.idCurso;

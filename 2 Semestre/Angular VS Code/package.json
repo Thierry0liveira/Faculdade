@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@stdlib/string-uppercase": "^0.3.0"
+  }
+}
